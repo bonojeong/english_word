@@ -1,0 +1,344 @@
+body {
+  width: 60vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+body header {
+  width: 60vw;
+  height: 100px;
+  position: fixed;
+  z-index: 1;
+}
+
+body header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+body header .nav div {
+  width: 140px;
+  height: 39px;
+  background-color: #fff;
+  color: #848484;
+  margin-right: 50px;
+  border: 1px solid #707070;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 10px;
+}
+
+body header .nav .nav_englishWord {
+  color: #ECECEC;
+  background-color: #6A6A6A;
+}
+
+body header .nav_close_btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+body main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body main .englishWord {
+  display: none;
+  background-color: #FFFFDC;
+  color: #707070;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .englishWord .direction img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body main .englishWord .direction .leftBtn {
+  left: 1%;
+}
+
+body main .englishWord .direction .rightBtn {
+  right: 1%;
+}
+
+body main .englishWord .wordImg {
+  width: 150px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+body main .englishWord .wordImg img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+body main .englishWord .word_En {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+body main .englishWord .word_En h1 {
+  font-size: 4rem;
+}
+
+body main .englishWord .word_En p {
+  font-size: 1.5rem;
+}
+
+body main .englishWord .meaning_Kr {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .englishWord .meaning_Kr > div {
+  padding-bottom: 32px;
+}
+
+body main .englishWord .meaning_Kr > div p .sentence_meaning {
+  display: block;
+}
+
+body main .englishWord .choose_alphabet {
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  left: 0px;
+  color: #6A6A6A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body main .englishWord .choose_alphabet .add_kr_en {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .englishWord .choose_alphabet .add_kr_en div {
+  margin-right: 20px;
+}
+
+body main .englishWord .choose_alphabet .add_kr_en .kr_btn p {
+  font-size: 2rem;
+  position: relative;
+}
+
+body main .englishWord .choose_alphabet .add_kr_en .kr_btn p span {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+
+body main .englishWord .choose_alphabet .add_kr_en .En_btn p {
+  position: relative;
+  font-size: 2rem;
+}
+
+body main .englishWord .choose_alphabet .add_kr_en .En_btn p span {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+
+body main .englishWord .choose_alphabet .alphabet {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+}
+
+body main .englishWord .choose_alphabet .alphabet li {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  margin-right: 5px;
+}
+
+body main .game {
+  width: 100%;
+  height: 100%;
+  background: #E3D2F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .game .game_correct_anwserImg {
+  width: 20%;
+  height: 35%;
+}
+
+body main .game .game_correct_anwserImg img {
+  width: 100%;
+}
+
+body main .game .game_HowManyWords {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .game .game_HowManyWords .game_word_alphabet {
+  border-bottom: 5px solid #707070;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+body main .game .game_HowManyWords .game_word_alphabet p {
+  font-size: 3rem;
+}
+
+body main .game .game_word_meaning_kr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .game .game_word_meaning_kr li {
+  padding: 0 20px;
+  font-size: 1.5rem;
+}
+
+body main .game .submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .game .submit .howManyLifesYouHave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .game .game_prev {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .game .game_prev img {
+  margin-right: 5px;
+}
+
+body main .game .game_next {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .game .game_next img {
+  margin-left: 5px;
+}
