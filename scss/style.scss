@@ -160,7 +160,8 @@ body{
             width: 100%;
             height: 100%;
             background: #E3D2F9;
-            display: flex;
+            // display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -200,10 +201,26 @@ body{
             .submit{
                 width: 100%;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
+                form {
+                    input{
+                        height: 66px;
+                        border: 1px solid #6A6A6A;
+                        text-align: center;
+                        font-size: 2rem
+                    }
+                }
                 .howManyLifesYouHave{
                     display: flex;
                     align-items: center;
+                    margin-bottom: 20px;
+                    p{
+                        font-size: 2rem;
+                    }
+                    h4{
+                        font-size: 3rem;
+                    }
                 }
             }
             .game_prev{
@@ -226,6 +243,11 @@ body{
                     margin-left: 5px;
                 }
             }
+        }
+        .quiz{
+            width: 100%;
+            height: 100vh;
+            background-color: #5E5E5E;
         }
     }
 }
