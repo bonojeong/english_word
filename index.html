@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/javascript.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="nav">
-            <div class="nav_englishWord">영단어 외우기</div>
-            <div class="nav_game">핵맨</div>
-            <div class="nav_quiz">단어 퀴즈</div>
-            <div class="nav_wordBook">영단어장</div>
+        <div class="nav" >
+            <div class="nav_englishWord" data-num = '0'>
+                <p>영단어 외우기</p>
+            </div>
+            <div class="nav_game" data-num = '1'>
+                <p>핵맨</p>
+            </div>
+            <div class="nav_quiz" data-num = '2'>
+                <p>단어 퀴즈</p>
+            </div>
+            <div class="nav_wordBook" data-num = '3'>
+                <p>영단어장</p>
+            </div>
         </div>
         <div class="nav_close_btn"><img src="img/closeButton.png" alt="closeButton"></div>
     </header>
@@ -35,19 +44,19 @@
                 <div class="first_meaning_Kr">
                     <h2 class="hide_KR">1. 답사[탐사/탐험]하다</h2>
                     <p class="sentence">The city is best <strong class="hide_EN">explored</strong> on foot.
-                        <span class="sentence_meaning">그 도시는 걸어서 답사하는 것이 가장 좋다.</span>
+                        <span class="sentence_meaning hide_KR">그 도시는 걸어서 답사하는 것이 가장 좋다.</span>
                     </p>
                 </div>
                 <div class="second_meaning_Kr">
                     <h2 class="hide_KR">2. 탐구[분석]하다</h2>
                     <p class="sentence">These ideas will be <strong class="hide_EN">explored</strong> in more detail in chapter 7.
-                        <span class="sentence_meaning">이런 생각들은 7장에서 더 자세히 탐구될 것이다.</span>
+                        <span class="sentence_meaning hide_KR">이런 생각들은 7장에서 더 자세히 탐구될 것이다.</span>
                     </p>
                 </div>
                 <div class="third_meaning_Kr">
                     <h2 class="hide_KR">3. (손이나 발 등으로) 더듬어 보다[살피다]</h2>
                     <p class="sentence">She <strong class="hide_EN">explored</strong> the sand with her toes.
-                        <span class="sentence_meaning">그녀는 발가락을 모래에 대 보았다.</span>
+                        <span class="sentence_meaning hide_KR">그녀는 발가락을 모래에 대 보았다.</span>
                     </p>
                 </div>
             </div>
@@ -57,12 +66,12 @@
                         <img src="img/add.png" alt="add">
                     </div>
                     <div class="kr_btn">
-                        <p>가
+                        <p class="korea_btn">가
                             <span class="hide1"><img src="img/hide.png" alt="hide"></span>
                         </p>
                     </div>
                     <div class="En_btn">
-                        <p>En
+                        <p class="english_btn">En
                             <span class="hide2"><img src="img/hide.png" alt="hide"></span>
                         </p>
                     </div>
@@ -251,43 +260,43 @@
         </section>
         <section class="quiz">
             <div class="Time">
-                <p>남은시간 :<span class="leftTime"></span>초</p>
+                <p>남은시간 :<span class="leftTime">10</span>초</p>
             </div>
             <div class="question">
-                <h1 class="question_word"></h1>
+                <h1 class="question_word">explore</h1>
             </div>
             <ul class="number">
                 <li class="number1">
-                    <p>①
+                    <p class="number_number">①
                         <span class="quest_correct"><img src="img/correct.png" alt="correct"></span>
                         <span class="quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
                         <span class="quest_check"><img src="img/check.png" alt="check"></span>
-                        <span>탐험하다.</span>
                     </p>
+                    <p class="number1_text number_text">탐험하다.</p>
                 </li>
                 <li class="number2">
-                    <p>②
-                        <span><img src="img/correct.png" alt="correct"></span>
-                        <span><img src="img/wrong.png" alt="wrong"></span>
-                        <span><img src="img/check.png" alt="check"></span>
-                        <span>농구하다.</span>
+                    <p class="number_number">②
+                        <span class="quest_correct"><img src="img/correct.png" alt="correct"></span>
+                        <span class="quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                        <span class="quest_check"><img src="img/check.png" alt="check"></span>
                     </p>
+                    <p class="number2_text number_text">농구하다.</p>
                 </li>
                 <li class="number3">
-                    <p>③
-                        <span><img src="img/correct.png" alt="correct"></span>
-                        <span><img src="img/wrong.png" alt="wrong"></span>
-                        <span><img src="img/check.png" alt="check"></span>
-                        <span>숙제하다.</span>
+                    <p class="number_number">③
+                        <span class="quest_correct"><img src="img/correct.png" alt="correct"></span>
+                        <span class="quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                        <span class="quest_check"><img src="img/check.png" alt="check"></span>
                     </p>
+                    <p class="number3_text number_text">숙제하다.</p>
                 </li>
                 <li class="number4">
-                    <p>④
-                        <span><img src="img/correct.png" alt="correct"></span>
-                        <span><img src="img/wrong.png" alt="wrong"></span>
-                        <span><img src="img/check.png" alt="check"></span>
-                        <span>먹다.</span>
+                    <p class="number_number">④
+                        <span class="quest_correct"><img src="img/correct.png" alt="correct"></span>
+                        <span class="quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                        <span class="quest_check"><img src="img/check.png" alt="check"></span>
                     </p>
+                    <p class="number4_text number_text">먹다.</p>
                 </li>
             </ul>
             <div class="quiz_direction">
@@ -310,82 +319,285 @@
                     <p>즐겨찾기</p>
                 </div>
             </div>
-            <ul class="wrongWord_words">
-                <li>
-                    <p>collect</p>
-                </li>
-                <li>
-                    <p>explore</p>
-                </li>
-                <li>
-                    <p>filter</p>
-                </li>
-                <li>
-                    <p>function</p>
-                </li>
+            <ul class="wrongWord_words_view">
+                <div class="wrongWord_words">
+                    <li>
+                        <p>collect</p>
+                    </li>
+                    <li>
+                        <p>explore</p>
+                    </li>
+                    <li>
+                        <p>filter</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                </div>
             </ul>
-            <ul class="addWord_words">
-                <li>
-                    <p>collect</p>
-                </li>
-                <li>
-                    <p>explore</p>
-                </li>
-                <li>
-                    <p>filter</p>
-                </li>
-                <li>
-                    <p>function</p>
-                </li>
+            <ul class="addWord_words_view">
+                <div class="addWord_words">
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                    <li>
+                        <p>function</p>
+                    </li>
+                </div>
             </ul>
             <div class="TryQuiz">
                 <p>문제 풀기</p>
             </div>
             <div class="alert">
-                <div class="alert">
-                    <div class="closeBtn"><img src="img/closeButton.png" alt="closeButton"></div>
-                    <p>단어가 4개 이상 일 때만 문제 풀기가 가능합니다!</p>
-                </div>
+                <div class="closeBtn"><img src="img/closeButton.png" alt="closeButton"></div>
+                <p>단어가 4개 이상 일 때만 문제 풀기가 가능합니다!</p>
             </div>
             <div class="wordBookQuiz">
                 <div class="wordBookQuiz_closeBtn">
                     <img src="img/closeButton.png" alt="closeButton">
                 </div>
-                <div class="question">
-                    <h1 class="question_word"></h1>
+                <div class="wB_question">
+                    <h1 class="wB_question_word">explore</h1>
                 </div>
                 <ul class="wordBook_number">
                     <li class="wB_number1">
-                        <p>①
-                            <span class="quest_correct"><img src="img/correct.png" alt="correct"></span>
-                            <span class="quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
-                            <span class="quest_check"><img src="img/check.png" alt="check"></span>
-                            <span>탐험하다.</span>
+                        <p class="wB_number">①
+                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
+                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
                         </p>
+                        <p class="wB_number1_text wB_number_text">탐험하다.</p>
                     </li>
                     <li class="wB_number2">
-                        <p>②
-                            <span><img src="img/correct.png" alt="wB_correct"></span>
-                            <span><img src="img/wrong.png" alt="wB_wrong"></span>
-                            <span><img src="img/check.png" alt="wB_check"></span>
-                            <span>농구하다.</span>
+                        <p class="wB_number">②
+                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
+                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
                         </p>
+                        <p class="wB_number2_text">농구하다.</p>
                     </li>
                     <li class="wB_number3">
-                        <p>③
-                            <span><img src="img/correct.png" alt="wB_correct"></span>
-                            <span><img src="img/wrong.png" alt="wB_wrong"></span>
-                            <span><img src="img/check.png" alt="wB_check"></span>
-                            <span>숙제하다.</span>
+                        <p class="wB_number">③
+                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
+                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
                         </p>
+                        <p class="wB_number3_text">숙제하다.</p>
                     </li>
                     <li class="wB_number4">
-                        <p>④
-                            <span><img src="img/correct.png" alt="wB_correct"></span>
-                            <span><img src="img/wrong.png" alt="wB_wrong"></span>
-                            <span><img src="img/check.png" alt="wB_check"></span>
-                            <span>먹다.</span>
+                        <p class="wB_number">④
+                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
+                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
+                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
                         </p>
+                        <p class="wB_number4_text">먹다.</p>
                     </li>
                 </ul>
                 <div class="wB_direction">
@@ -400,6 +612,9 @@
                 </div>
             </div>
             <div class="wB_revise">
+                <div class="wordBookrevise_closeBtn">
+                    <img src="img/closeButton.png" alt="closeButton">
+                </div>
                 <div class="wB_direction">
                     <img src="img/leftbtn.png" alt="left" class="wB_leftBtn">
                     <img src="img/rightbtn.png" alt="right" class="wB_rightBtn">

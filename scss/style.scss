@@ -9,20 +9,24 @@ body{
         z-index: 1;
         .nav {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-evenly;
             width: 100%;
             height: 100%;
             div{
-                width: 140px;
-                height: 39px;
+                cursor: pointer;
+                width: 20%;
+                height: 70%;
                 background-color: #fff;
                 color: #848484;
-                margin-right: 50px;
                 border: 1px solid #707070;
                 text-align: center;
                 line-height: 38px;
                 border-radius: 10px;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .nav_englishWord{
                 color: #ECECEC;
@@ -41,16 +45,17 @@ body{
         width: 100%;
         height: 100%;
         .englishWord {
-            display: none;
             background-color: #FFFFDC;
             color: #707070;
             width: 100%;
             height: 100%;
-            // display: flex;
+            display: none;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             .direction{
+                cursor: pointer;
                 img{
                     position: absolute;
                     top: 50%;
@@ -96,6 +101,9 @@ body{
                         }
                     }
                 }
+                .hide_KR_On_Off{
+                    opacity: 0;
+                }
             }
             .choose_alphabet{
                 width: 100%;
@@ -112,8 +120,12 @@ body{
                     div{
                         margin-right: 20px;
                     }
+                    .add {
+                        cursor: pointer;
+                    }
                     .kr_btn{
                         p{
+                            cursor: pointer;
                             font-size: 2rem;
                             position: relative;
                             span{
@@ -123,10 +135,14 @@ body{
                                 left: 50%;
                                 transform: translate(-50%, -40%);
                             }
+                            .hide1_On_Off{
+                                opacity: 0;
+                            }
                         }
                     }
                     .En_btn{
                         p{
+                            cursor: pointer;
                             position: relative;
                             font-size: 2rem;
                             span{
@@ -135,6 +151,9 @@ body{
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -40%);
+                            }
+                            .hide2_On_Off{
+                                opacity: 0;
                             }
                         }
                     }
@@ -142,9 +161,11 @@ body{
                 .alphabet{
                     width: 100%;
                     display: flex;
+                    justify-content: space-evenly;
                     flex-direction: row;
                     margin-top: 20px;
                     li{
+                        cursor: pointer;
                         width: 33px;
                         height: 33px;
                         border: 1px solid #707070;
@@ -246,8 +267,373 @@ body{
         }
         .quiz{
             width: 100%;
-            height: 100vh;
+            height: 100%;
             background-color: #5E5E5E;
+            color: #fff;
+            // display: flex;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            .Time {
+                height: 10%;
+                width: 75%;
+                margin: 0 auto;
+                font-size: 2rem;
+                p{
+                    text-align: right;
+                }
+            }
+            .question{
+                width: 100%;
+                height: 20%;
+                text-align: center;
+                .question_word{
+                    font-size: 4rem;
+                }
+            }
+            .number{
+                width: 80%;
+                padding-left: 100px;
+                padding-bottom: 100px;
+                margin: 0 auto;
+                height: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    // justify-content: space-between;
+                    p{
+                        font-size: 2rem;
+                    }
+                    .number_number{
+                        position: relative;
+                        span{
+                            // display: none;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    .number_text{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .quiz_direction{
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+                padding-bottom: 20px;
+                .quiz_prev{
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    img{
+                        margin-right: 20px;
+                    }
+                }
+                .quiz_next{
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    p{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        .wordBook {
+            width: 100%;
+            height: 100%;
+            background: #CEE3FF;
+            color: #343434;
+            position: relative;
+            display: none;
+            // display: flex;
+            flex-direction: column;
+            .kind_of_wordBook{
+                font-size: 1.5rem;
+                width: 90%;
+                height: 15%;
+                margin: 0 auto;
+                display: flex;
+                // display: none;
+                align-items: flex-end;
+                div {
+                    width: 6em;
+                    text-align: center;
+                    border: 1px solid #707070;
+                    border-radius: 10px;
+                }
+                .wrongWords{
+                    color: #fff;
+                    background: #707070;
+                    margin-right: 20px;
+                }
+                .addWord {
+                    background: #fff;
+                    color: #707070;
+                }
+            }
+            .wrongWord_words_view{
+                width: 90%;
+                height: 70%;
+                margin: 0 auto;
+                overflow: scroll;
+                overflow-x: hidden;
+                // display: none;
+                .wrongWord_words{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    li{
+                        border-radius: 10px;
+                        width: 30%;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        margin-top: 20px;
+                        background: #fff;
+                        color: #707070;
+                    }
+                }
+            }
+            .addWord_words_view{
+                width: 90%;
+                height: 70%;
+                margin: 0 auto;
+                overflow: scroll;
+                overflow-x: hidden;
+                display: none;
+                .addWord_words{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    li{
+                        border-radius: 10px;
+                        width: 30%;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        margin-top: 20px;
+                        background: #fff;
+                        color: #707070;
+                    }
+                }
+            }
+            .TryQuiz{
+                position: absolute;
+                bottom: 5%;
+                right: 5%;
+                border-radius: 10px;
+                width: 15%;
+                text-align: center;
+                font-size: 1.5rem;
+                background: #fff;
+                color: #707070;
+                border: 1px solid #707070;
+                // display: none;
+            }
+            .alert{
+                width: 100%;
+                height: 20%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                font-size: 1.5rem;
+                transform: translateY(-50%);
+                background: #EEEEEE;
+                border: 1px solid #707070;
+                // display: flex;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                .closeBtn{
+                    position: absolute;
+                    top: 10%;
+                    right: 5%;
+
+                }
+            }
+            .wordBookQuiz{
+                width: 100%;
+                height: 100%;
+                background-color: #CEE3FF;
+                color: #707070;
+                // display: flex;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                .wordBookQuiz_closeBtn{
+                    position: absolute;
+                    top: 5%;
+                    right: 5%;
+                }
+                .wB_question{
+                    width: 100%;
+                    height: 20%;
+                    text-align: center;
+                    .wB_question_word{
+                        font-size: 4rem;
+                    }
+                }
+                .wordBook_number{
+                    width: 80%;
+                    padding-left: 100px;
+                    padding-bottom: 100px;
+                    margin: 0 auto;
+                    height: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li{
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+                        // justify-content: space-between;
+                        p{
+                            font-size: 2rem;
+                        }
+                        .wB_number{
+                            position: relative;
+                            span{
+                                // display: none;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                        .wB_number_text{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .wB_direction{
+                    display: flex;
+                    width: 90%;
+                    justify-content: space-between;
+                    padding-bottom: 20px;
+                    .wB_prev{
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        img{
+                            margin-right: 20px;
+                        }
+                    }
+                    .wB_next{
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        p{
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+            .wB_revise{
+                background-color: #CEE3FF;
+                color: #707070;
+                width: 100%;
+                height: 100%;
+                display: none;
+                // display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .wordBookrevise_closeBtn{
+                    position: absolute;
+                    top: 5%;
+                    right: 5%;
+                }
+                .wB_direction{
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    .wB_leftBtn{
+                        left: 1%;
+                    }
+                    .wB_rightBtn{
+                        right: 1%;
+                    }
+                }
+                .wB_wordImg{
+                    width: 150px;
+                    height: 200px;
+                    margin-bottom: 50px;
+                    img{
+                        border-radius: 10px;
+                        width: 100%;
+                    }
+                }
+                .wB_word_En{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 20px;
+                    h1{
+                        font-size: 4rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+                .wB_meaning_Kr{
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    >div {
+                        padding-bottom: 32px;
+                        p{
+                            .wB_sentence_meaning{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .wB_kr_en {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    div{
+                        margin-right: 20px;
+                    }
+                    .wB_kr_btn{
+                        p{
+                            font-size: 2rem;
+                            position: relative;
+                            span{
+                                display: none;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -40%);
+                            }
+                        }
+                    }
+                    .wB_En_btn{
+                        p{
+                            position: relative;
+                            font-size: 2rem;
+                            span{
+                                display: none;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -40%);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
