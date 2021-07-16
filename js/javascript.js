@@ -16,6 +16,11 @@ function navChange(){
             })
         })
     })
+    //quiz들어갔을 때 start버튼 재생성
+    var start_btn = document.querySelector('.start_btn');
+    nav[2].addEventListener('click',function(){
+        start_btn.style.display = 'unset';
+    })
 }
 navChange()
 
@@ -130,7 +135,30 @@ AtWord()
 ////////////////////// 핵맨 /////////////////////////
 
 ///////////////////// 단어 퀴즈 /////////////////////
+function AtQuiz(){
+    //스타트버튼 누르기 ! 
+    var start_btn = document.querySelector('.start_btn');
+    const start_game = document.querySelector('.start_game');
+    start_game.addEventListener('click',function(){
+        start_btn.style.display = 'none'
+    })
+    //스타트 버튼 누르면 시간 초 작동
+    const leftTime = document.querySelector('.leftTime');
+    let count = 10
+    let time = 10
+    // 타이머 함수 1초씩 호출하는 함수 만들기
+		time = setInterval("myTimer()",1000);
+    function myTimer() {
+		count = count - 1; // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
+		if(count == 0) { 
+			clearInterval(time);	// 시간 초기화
+			alert("시간이 완료되었습니다.")
+		}
+	}
 
+
+}
+AtQuiz()
 
 ///////////////////// 영단어장 //////////////////////
 
