@@ -101,9 +101,12 @@ body{
                         }
                     }
                 }
-                .hide_KR_On_Off{
-                    opacity: 0;
-                }
+            }
+            .hide_KR_On_Off{
+                opacity: 0;
+            }
+            .hide_EN_On_Off{
+                opacity: 0;
             }
             .choose_alphabet{
                 width: 100%;
@@ -136,7 +139,7 @@ body{
                                 transform: translate(-50%, -40%);
                             }
                             .hide1_On_Off{
-                                opacity: 0;
+                                display: unset;
                             }
                         }
                     }
@@ -153,7 +156,7 @@ body{
                                 transform: translate(-50%, -40%);
                             }
                             .hide2_On_Off{
-                                opacity: 0;
+                                display: unset;
                             }
                         }
                     }
@@ -368,6 +371,7 @@ body{
                     text-align: center;
                     border: 1px solid #707070;
                     border-radius: 10px;
+                    cursor: pointer;
                 }
                 .wrongWords{
                     color: #fff;
@@ -399,6 +403,7 @@ body{
                         margin-top: 20px;
                         background: #fff;
                         color: #707070;
+                        cursor: pointer;
                     }
                 }
             }
@@ -415,6 +420,7 @@ body{
                     align-items: center;
                     flex-wrap: wrap;
                     li{
+                        cursor: pointer;
                         border-radius: 10px;
                         width: 30%;
                         text-align: center;
@@ -436,6 +442,7 @@ body{
                 background: #fff;
                 color: #707070;
                 border: 1px solid #707070;
+                cursor: pointer;
                 // display: none;
             }
             .alert{
@@ -499,9 +506,10 @@ body{
                             font-size: 2rem;
                         }
                         .wB_number{
+                            cursor: default;
                             position: relative;
                             span{
-                                // display: none;
+                                display: none;
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;

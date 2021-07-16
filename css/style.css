@@ -157,7 +157,11 @@ body main .englishWord .meaning_Kr > div p .sentence_meaning {
   display: block;
 }
 
-body main .englishWord .meaning_Kr .hide_KR_On_Off {
+body main .englishWord .hide_KR_On_Off {
+  opacity: 0;
+}
+
+body main .englishWord .hide_EN_On_Off {
   opacity: 0;
 }
 
@@ -212,7 +216,7 @@ body main .englishWord .choose_alphabet .add_kr_en .kr_btn p span {
 }
 
 body main .englishWord .choose_alphabet .add_kr_en .kr_btn p .hide1_On_Off {
-  opacity: 0;
+  display: unset;
 }
 
 body main .englishWord .choose_alphabet .add_kr_en .En_btn p {
@@ -231,7 +235,7 @@ body main .englishWord .choose_alphabet .add_kr_en .En_btn p span {
 }
 
 body main .englishWord .choose_alphabet .add_kr_en .En_btn p .hide2_On_Off {
-  opacity: 0;
+  display: unset;
 }
 
 body main .englishWord .choose_alphabet .alphabet {
@@ -552,6 +556,7 @@ body main .wordBook .kind_of_wordBook div {
   text-align: center;
   border: 1px solid #707070;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 body main .wordBook .kind_of_wordBook .wrongWords {
@@ -595,6 +600,7 @@ body main .wordBook .wrongWord_words_view .wrongWord_words li {
   margin-top: 20px;
   background: #fff;
   color: #707070;
+  cursor: pointer;
 }
 
 body main .wordBook .addWord_words_view {
@@ -621,6 +627,7 @@ body main .wordBook .addWord_words_view .addWord_words {
 }
 
 body main .wordBook .addWord_words_view .addWord_words li {
+  cursor: pointer;
   border-radius: 10px;
   width: 30%;
   text-align: center;
@@ -641,6 +648,7 @@ body main .wordBook .TryQuiz {
   background: #fff;
   color: #707070;
   border: 1px solid #707070;
+  cursor: pointer;
 }
 
 body main .wordBook .alert {
@@ -731,10 +739,12 @@ body main .wordBook .wordBookQuiz .wordBook_number li p {
 }
 
 body main .wordBook .wordBookQuiz .wordBook_number li .wB_number {
+  cursor: default;
   position: relative;
 }
 
 body main .wordBook .wordBookQuiz .wordBook_number li .wB_number span {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
