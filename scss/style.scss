@@ -167,6 +167,10 @@ body{
                     justify-content: space-evenly;
                     flex-direction: row;
                     margin-top: 20px;
+                    .a{
+                        background: #707070;
+                        color: #fff;
+                    }
                     li{
                         cursor: pointer;
                         width: 33px;

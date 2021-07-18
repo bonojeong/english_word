@@ -253,6 +253,11 @@ body main .englishWord .choose_alphabet .alphabet {
   margin-top: 20px;
 }
 
+body main .englishWord .choose_alphabet .alphabet .a {
+  background: #707070;
+  color: #fff;
+}
+
 body main .englishWord .choose_alphabet .alphabet li {
   cursor: pointer;
   width: 33px;
