@@ -6,12 +6,15 @@ words = {
             "word_En_pron":"[əd│væns]",
             "meaning_Kr1":"(특히 군대의) 전진, 진군",
             "meaning_Kr1_sen":"We feared that an advance on the capital would soon follow.",
+            "meaning_Kr1_senWord":"advance",
             "meaning_Kr1_senMeaning":"우리는 곧 뒤이어 수도로 진군해 올까 봐 두려웠다.",
             "meaning_Kr2":"진전, 발전",
             "meaning_Kr2_sen":"recent advances in medical science",
+            "meaning_Kr2_senWord":"advance",
             "meaning_Kr2_senMeaning":"의학계의 최근 발전 사항들",
             "meaning_Kr3":"선금, 선불",
             "meaning_Kr3_sen":"They offered an advance of £5,000 after the signing of the contract.",
+            "meaning_Kr3_senWord":"advance",
             "meaning_Kr3_senMeaning":"그들은 계약 후 선금으로 5천 파운드를 제시했다."
         },
         {

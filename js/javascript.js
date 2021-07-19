@@ -25,7 +25,6 @@ function navChange(){
     })
 }
 navChange()
-
 //한글 가리기 영어 가리기 
 function hideEffect(){
     const krHide = document.querySelector('.korea_btn');
@@ -94,33 +93,8 @@ btnImgChange()
 //누른 알파벳으로 시작하는 단어배열 json에서 불러옴 
 //한번더 누르면 전체 단어 랜덤
 function AtWord(){
-    //알파벳 번호를 currentAlphabet로 지정
-    let currentAlphabet = 0
-    const alphabets = document.querySelectorAll('.alphabet li')
-    alphabets.forEach ((element,index) => {
-        element.addEventListener('click',alphabetsColorChange)
-        element.addEventListener('click',alphabetsCheck)
-        element.addEventListener('dblclick',function(){
-            alphabets.forEach ( i => {
-                i.style.background = "none";
-                i.style.color = "#6a6a6a";
-            })
-        })
-        //알파벳 번호 currentAlphabet 변경
-        function alphabetsCheck(){
-            currentAlphabet = index;
-            console.log(currentAlphabet);
-        }
-        //알파벳 색깔 교체
-        function alphabetsColorChange(){
-            alphabets.forEach ( i => {
-                i.style.background = "none";
-                i.style.color = "#6a6a6a";
-                alphabets[index].style.background = "#707070";
-                alphabets[index].style.color = "#fff"
-            })
-        }
-    })
+    //현재 단어 순번
+    let currentWord 
     //각각의 알파벳에 json데이터 담기
     let a_word = wordDate.a_word
     let b_word = wordDate.b_word
@@ -153,13 +127,80 @@ function AtWord(){
         i_word,j_word,k_word,l_word,m_word,n_word,o_word,p_word,q_word,r_word,
         s_word,t_word,u_word,v_word,w_word,x_word,y_word,z_word
     ]
-    console.log(wordsArr.length)
-    console.log(alphabets[0])
-    //a눌렀을때 a_word배열 가져오기
-
-    console.log(wordsArr[currentAlphabet])
-    console.log([currentAlphabet])
-
+    let changeImg = document.querySelector('.wordImg')
+    let change_word_En = document.querySelector('.changeWord')
+    let change_word_Pron = document.querySelector('.changePron')
+    let change_word_Kr1 = document.querySelector('.change1Kr')
+    let change_word_Kr1Sen = document.querySelector('.change1Sen')
+    let change_word_Kr1SenKr = document.querySelector('.change1SenKr')
+    let change_word_Kr2 = document.querySelector('.change2Kr')
+    let change_word_Kr2Sen = document.querySelector('.change2Sen')
+    let change_word_Kr2SenKr = document.querySelector('.change2SenKr')
+    let change_word_Kr3 = document.querySelector('.change3Kr')
+    let change_word_Kr3Sen = document.querySelector('.change3Sen')
+    let change_word_Kr3SenKr = document.querySelector('.change3SenKr')
+    //next 버튼에 currentAlphabet번호 인식해서 단어 배열넣기
+    function wordTextChange(){
+        var currentAlphabetArr = wordsArr[currentAlphabet]
+        changeImg.innerHTML = currentAlphabetArr[currentWord].wordImg;
+        change_word_En.innerHTML = currentAlphabetArr[currentWord].word_En;
+        change_word_Pron.innerHTML = currentAlphabetArr[currentWord].word_En_pron;
+        change_word_Kr1.innerHTML = currentAlphabetArr[currentWord].meaning_Kr1;
+        change_word_Kr1Sen.innerHTML = currentAlphabetArr[currentWord].meaning_Kr1_sen;
+        change_word_Kr1SenKr.innerHTML = currentAlphabetArr[currentWord].meaning_Kr1_senMeaning;
+        change_word_Kr2.innerHTML = currentAlphabetArr[currentWord].meaning_Kr2;
+        change_word_Kr2Sen.innerHTML = currentAlphabetArr[currentWord].meaning_Kr2_sen;
+        change_word_Kr2SenKr.innerHTML = currentAlphabetArr[currentWord].meaning_Kr2_senMeaning;
+        change_word_Kr3.innerHTML = currentAlphabetArr[currentWord].meaning_Kr3;
+        change_word_Kr3Sen.innerHTML = currentAlphabetArr[currentWord].meaning_Kr3_sen;
+        change_word_Kr3SenKr.innerHTML = currentAlphabetArr[currentWord].meaning_Kr3_senMeaning;
+    }
+    //알파벳 번호를 currentAlphabet로 지정
+    let currentAlphabet = 0
+    const alphabets = document.querySelectorAll('.alphabet li')
+    alphabets.forEach ((element,index) => {
+        element.addEventListener('click',alphabetsColorChange)
+        element.addEventListener('click',alphabetsCheckAndShuffle)
+        element.addEventListener('click',wordTextChange)
+        element.addEventListener('dblclick',function(){
+            alphabets.forEach ( i => {
+                i.style.background = "none";
+                i.style.color = "#6a6a6a";
+            })
+        })
+        function alphabetsCheckAndShuffle(){
+            //알파벳 누를때마다 currentWord 순번 0으로 초기화
+            currentWord = 0
+            //알파벳 번호 currentAlphabet 변경
+            currentAlphabet = index;
+            //currentAlphabet의 값에 따라 단어 배열 가져오고
+            var currentAlphabetArr = wordsArr[currentAlphabet]
+            // 가져온 배열을 랜덤 셔플 !
+            function shuffle(array) {
+                var m = array.length,
+                    t,
+                    i
+                while (m) {
+                    i = Math.floor(Math.random() * m--)
+                    t = array[m]
+                    array[m] = array[i]
+                    array[i] = t
+                }
+                return array
+            }
+            console.log(shuffle(currentAlphabetArr))
+        }
+        //알파벳 색깔 교체
+        function alphabetsColorChange(){
+            alphabets.forEach ( i => {
+                i.style.background = "none";
+                i.style.color = "#6a6a6a";
+                alphabets[index].style.background = "#707070";
+                alphabets[index].style.color = "#fff"
+                leftBtn.style.opacity = '0.8'
+            })
+        }
+    })
     //next prev 이미지 변경
     const leftBtn = document.querySelector('.leftBtn');
     const rightBtn = document.querySelector('.rightBtn');
@@ -175,24 +216,109 @@ function AtWord(){
     rightBtn.addEventListener('mouseup',function(){
         rightBtn.src = "img/rightbtn.png";
     })
-    
-    //next 버튼에 currentAlphabet번호 인식해서 단어 배열넣기
-    rightBtn.addEventListener('click',function(){
-        console.log(wordsArr[currentAlphabet])
-    })
     //더블클릭할땐 currentAlphabet 27로 설정
     const dubbleClick = document.querySelector('.alphabet')
     dubbleClick.addEventListener('dblclick',function(){
         currentAlphabet = 27
         console.log(currentAlphabet)
     })
+    const showWord = function(){
+        function nextAlphabetChange(){
+            var currentAlphabetArr = wordsArr[currentAlphabet]
+            if( currentWord < currentAlphabetArr.length - 1){
+                leftBtn.removeAttribute('disable')
+                currentWord = currentWord + 1;
+                rightBtn.style.opacity = '1';
+                leftBtn.style.opacity = '1';
+                wordTextChange()
+            }
+            if(currentWord == currentAlphabetArr.length - 1){
+                rightBtn.setAttribute('disable','true')
+                rightBtn.style.opacity = '0.3'
+            }
+            console.log(currentWord)
+        }
+        function prevAlphabetChange(){
+            var currentAlphabetArr = wordsArr[currentAlphabet]
+            if(currentWord > 0 ){
+                rightBtn.removeAttribute('disable')
+                currentWord = currentWord -1;
+                leftBtn.style.opacity = '1';
+                rightBtn.style.opacity = '1';
+                wordTextChange()
+            }
+            if(currentWord == 0 ){
+                leftBtn.setAttribute('disabled','true')
+                leftBtn.style.opacity = '0.3'
+            }
+            console.log(currentWord)
+        }
+        function init(){
+            leftBtn.setAttribute('disabled','true')
+            leftBtn.addEventListener('click',prevAlphabetChange)
+            rightBtn.addEventListener('click',nextAlphabetChange)
+            leftBtn.style.opacity = '0.2'
+            currentWord = 0
+        }
+        init()
+    }
+    showWord()
+
+    //즐겨찾기버튼 누르면 보이는 단어가 영단어장의 즐겨찾기 리스트에 추가됨
+    const add = document.querySelector('.add');
+    //즐겨찾기 눌렀을때 모션
+    add.addEventListener('click',function(){
+        setTimeout(function(){
+            setTimeout(goingUp,0)
+            setTimeout(backToInit,500)
+        },0)
+        function goingUp(){
+            change_word_En.style.transition = '0.5s'
+            change_word_En.style.transform = `translateY(-20%)` 
+            change_word_En.style.opacity = '0'
+        }
+        function backToInit(){
+            change_word_En.style.transition = '0s'
+            change_word_En.style.transform = `translateY(0%)` 
+            change_word_En.style.opacity = '1'
+        }
+    })
+    //addWord_words li에 있는 단어들을 배열로 만들어야해 그러면 ...
+    //Set객체로 중복되는 배열 생성 X 
+    const addWord_wordsList = document.querySelector('.addWord_words');
+    let addWordArr = new Set();
+
+    add.addEventListener('click',addWord)
+    //addWordArr안에 li 생성 
+    //그 안에 p 생성  
+    //p 안에 화면에 보이는 단어 텍스트 추가!
+    function addWord(){
+        //배열에 추가 Set는 add를 사용해서 추가 push아님
+        //배열이랑 해당하는 단어랑 비교에서 배열안에 있으면 단어추가 안됨!
+        //배열에 includes로 배열을 검색해서 중복되는지 확인 !
+        if([...addWordArr].includes(change_word_En.innerHTML) == false){
+            //중복이 안되면 li추가 !!
+            const li = document.createElement('li');
+            const p = document.createElement('p');
+            p.append(change_word_En.innerHTML);
+            addWord_wordsList.append(li);
+            li.append(p)
+        }
+        //배열에 단어추가하기 !
+        addWordArr.add(change_word_En.innerHTML)
+        //Set 배열 확인하는법 [ ...배열이름 ] 
+        // console.log([...addWordArr])
+    }
 }
 AtWord()
 
-//즐겨찾기버튼 누르면 보이는 단어가 영단어장의 즐겨찾기 리스트에 추가됨
 
 
 ////////////////////// 핵맨 /////////////////////////
+
+
+
+
 
 ///////////////////// 단어 퀴즈 /////////////////////
 function AtQuiz(){
@@ -202,23 +328,10 @@ function AtQuiz(){
     start_game.addEventListener('click',function(){
         start_btn.style.display = 'none'
     })
-    // //스타트 버튼 누르면 시간 초 작동
-    // const leftTime = document.querySelector('.leftTime');
-    // let count = 10
-    // let time = 10
-    // // 타이머 함수 1초씩 호출하는 함수 만들기
-	// 	time = setInterval("myTimer()",1000);
-    // function myTimer() {
-	// 	count = count - 1; // 타이머 선택 숫자에서 -1씩 감산함(갱신되기 때문)
-	// 	if(count == 0) { 
-	// 		clearInterval(time);	// 시간 초기화
-	// 		alert("시간이 완료되었습니다.")
-	// 	}
-	// }
-
 
 }
 AtQuiz()
+
 
 ///////////////////// 영단어장 //////////////////////
 
@@ -301,23 +414,3 @@ function AtWordBook(){
     wB_DirectionImgChange()
 }
 AtWordBook()
-
-
-//배열 랜덤 섞기
-// let abcd = [1,2,3,4,5,6,7,8,9,10];
-
-// function shuffle(a){
-//     var j; // 랜덤 함수 넣을 변수
-//     var x; // 스왑 빈값 변수
-//     var i; // 변수
-//     for (i = a.length; i; i--){
-//         //j는 0~9까지의 랜덤값!
-//         j = Math.floor(Math.random() * i);
-//         //x는 a[9];
-//         x = a[ i -1 ];
-//         a[ i - 1 ] = a[ j ];
-//         a[ j ] = x;
-//     }
-//     console.log(a)
-// }
-// shuffle(abcd);
