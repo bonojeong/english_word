@@ -302,8 +302,7 @@ function Atgame1(){
     let game_meaning_kr3 = document.querySelector('.game_meaning_kr3');
     let leftLife = document.querySelector('.leftLife');
     let lifeImg = document.querySelector('.lifeImg');
-    // 현재 단어 순번!
-    currentWord = 0
+    // 라이프 갯수!!
     let life = 7
     let gamePoint = 0
     
@@ -370,10 +369,6 @@ function Atgame1(){
         game_HowManyWords.innerHTML = litext;
         gameWord.push(randomWord)
         console.log(randomWord)
-
-        //배열에 넣고 그 단어 순번 정해주기 !
-        currentWord = currentWord + 1
-        console.log(currentWord)
     }
 
     //input에 value값 받아오기
