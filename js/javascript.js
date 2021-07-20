@@ -1,5 +1,40 @@
 //json 파일 가져오기
 let wordDate = JSON.parse(JSON.stringify(words));
+
+//현재 단어 순번
+let currentWord 
+//각각의 알파벳에 json데이터 담기
+let a_word = wordDate.a_word
+let b_word = wordDate.b_word
+let c_word = wordDate.c_word
+let d_word = wordDate.d_word
+let e_word = wordDate.e_word
+let f_word = wordDate.f_word
+let g_word = wordDate.g_word
+let h_word = wordDate.h_word
+let i_word = wordDate.i_word
+let j_word = wordDate.j_word
+let k_word = wordDate.k_word
+let l_word = wordDate.l_word
+let m_word = wordDate.m_word
+let n_word = wordDate.n_word
+let o_word = wordDate.o_word
+let p_word = wordDate.p_word
+let q_word = wordDate.q_word
+let r_word = wordDate.r_word
+let s_word = wordDate.s_word
+let t_word = wordDate.t_word
+let u_word = wordDate.u_word
+let v_word = wordDate.v_word
+let w_word = wordDate.w_word
+let x_word = wordDate.x_word
+let y_word = wordDate.y_word
+let z_word = wordDate.z_word
+let wordsArr = [
+    a_word,b_word,c_word,d_word,e_word,f_word,g_word,h_word,
+    i_word,j_word,k_word,l_word,m_word,n_word,o_word,p_word,q_word,r_word,
+    s_word,t_word,u_word,v_word,w_word,x_word,y_word,z_word
+]
 //nav 클릭에 따라 섹션 변화
 function navChange(){
     const nav = document.querySelectorAll('.nav > div');
@@ -48,85 +83,47 @@ function hideEffect(){
 }
 hideEffect()
 
-//next버튼 누르면 json에서 불러오고
-//prev버튼 누르면 이전에있었던 단어 다시 나옴 
-//prev가 0일때는 disable속성 true추가 
-//next는 무한으로 누를수있음
+// 가져온 배열을 랜덤 셔플 !
+function shuffle(array) {
+    var m = array.length,
+        t,
+        i
+    while (m) {
+        i = Math.floor(Math.random() * m--)
+        t = array[m]
+        array[m] = array[i]
+        array[i] = t
+    }
+    return array
+}
 
 //버튼누를때 이미지 변경
 function btnImgChange(){
-    const gameLeftBtn = document.querySelector('.game_left_Btn');
-    const gameRightBtn = document.querySelector('.game_right_Btn');
+    
     const quizLeftBtn = document.querySelector('.quiz_left_Btn');
     const quizRightBtn = document.querySelector('.quiz_right_Btn');
-    
-    gameLeftBtn.addEventListener('mousedown',function(){
-        gameLeftBtn.src = "img/prevclicktheBtn.png";
-    })
-    gameLeftBtn.addEventListener('mouseup',function(){
-        gameLeftBtn.src = "img/leftbtn.png";
-    })
-    gameRightBtn.addEventListener('mousedown',function(){
-        gameRightBtn.src = "img/nextclicktheBtn.png";
-    })
-    gameRightBtn.addEventListener('mouseup',function(){
-        gameRightBtn.src = "img/rightbtn.png";
-    })
-    quizLeftBtn.addEventListener('mousedown',function(){
-        quizLeftBtn.src = "img/prevclicktheBtn.png";
-    })
-    quizLeftBtn.addEventListener('mouseup',function(){
-        quizLeftBtn.src = "img/leftbtn.png";
-    })
-    quizRightBtn.addEventListener('mousedown',function(){
-        quizRightBtn.src = "img/nextclicktheBtn.png";
-    })
-    quizRightBtn.addEventListener('mouseup',function(){
-        quizRightBtn.src = "img/rightbtn.png";
-    })
-
+    quizLeftBtn.addEventListener('mousedown',leftMouseDownImgChange)
+    quizLeftBtn.addEventListener('mouseup',leftMouseUpImgChange)
+    quizRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
+    quizRightBtn.addEventListener('mouseup',rightMouseUpImgChange)
 }
-btnImgChange()
 
+// 버튼 클릭시 이미지 변경
+function leftMouseDownImgChange(){
+    this.src = "img/prevclicktheBtn.png";
+}
+function leftMouseUpImgChange(){
+    this.src = "img/leftbtn.png";
+}
+function rightMouseDownImgChange(){
+    this.src = "img/nextclicktheBtn.png";
+}
+function rightMouseUpImgChange(){
+    this.src = "img/rightbtn.png";
+}
 
-//알파벳 종류 누르면 Bg색 color색 변경 
-//누른 알파벳으로 시작하는 단어배열 json에서 불러옴 
 //한번더 누르면 전체 단어 랜덤
 function AtWord(){
-    //현재 단어 순번
-    let currentWord 
-    //각각의 알파벳에 json데이터 담기
-    let a_word = wordDate.a_word
-    let b_word = wordDate.b_word
-    let c_word = wordDate.c_word
-    let d_word = wordDate.d_word
-    let e_word = wordDate.e_word
-    let f_word = wordDate.f_word
-    let g_word = wordDate.g_word
-    let h_word = wordDate.h_word
-    let i_word = wordDate.i_word
-    let j_word = wordDate.j_word
-    let k_word = wordDate.k_word
-    let l_word = wordDate.l_word
-    let m_word = wordDate.m_word
-    let n_word = wordDate.n_word
-    let o_word = wordDate.o_word
-    let p_word = wordDate.p_word
-    let q_word = wordDate.q_word
-    let r_word = wordDate.r_word
-    let s_word = wordDate.s_word
-    let t_word = wordDate.t_word
-    let u_word = wordDate.u_word
-    let v_word = wordDate.v_word
-    let w_word = wordDate.w_word
-    let x_word = wordDate.x_word
-    let y_word = wordDate.y_word
-    let z_word = wordDate.z_word
-    let wordsArr = [
-        a_word,b_word,c_word,d_word,e_word,f_word,g_word,h_word,
-        i_word,j_word,k_word,l_word,m_word,n_word,o_word,p_word,q_word,r_word,
-        s_word,t_word,u_word,v_word,w_word,x_word,y_word,z_word
-    ]
     let changeImg = document.querySelector('.wordImg')
     let change_word_En = document.querySelector('.changeWord')
     let change_word_Pron = document.querySelector('.changePron')
@@ -139,7 +136,11 @@ function AtWord(){
     let change_word_Kr3 = document.querySelector('.change3Kr')
     let change_word_Kr3Sen = document.querySelector('.change3Sen')
     let change_word_Kr3SenKr = document.querySelector('.change3SenKr')
-    //next 버튼에 currentAlphabet번호 인식해서 단어 배열넣기
+    const leftBtn = document.querySelector('.leftBtn');
+    const rightBtn = document.querySelector('.rightBtn');
+    const alphabets = document.querySelectorAll('.alphabet li')
+
+    //바뀔 텍스트들 JSON이랑 비교해서 선언!
     function wordTextChange(){
         var currentAlphabetArr = wordsArr[currentAlphabet]
         changeImg.innerHTML = currentAlphabetArr[currentWord].wordImg;
@@ -157,7 +158,7 @@ function AtWord(){
     }
     //알파벳 번호를 currentAlphabet로 지정
     let currentAlphabet = 0
-    const alphabets = document.querySelectorAll('.alphabet li')
+    //알파벳 기능 
     alphabets.forEach ((element,index) => {
         element.addEventListener('click',alphabetsColorChange)
         element.addEventListener('click',alphabetsCheckAndShuffle)
@@ -168,6 +169,7 @@ function AtWord(){
                 i.style.color = "#6a6a6a";
             })
         })
+        //셔플
         function alphabetsCheckAndShuffle(){
             //알파벳 누를때마다 currentWord 순번 0으로 초기화
             currentWord = 0
@@ -175,20 +177,7 @@ function AtWord(){
             currentAlphabet = index;
             //currentAlphabet의 값에 따라 단어 배열 가져오고
             var currentAlphabetArr = wordsArr[currentAlphabet]
-            // 가져온 배열을 랜덤 셔플 !
-            function shuffle(array) {
-                var m = array.length,
-                    t,
-                    i
-                while (m) {
-                    i = Math.floor(Math.random() * m--)
-                    t = array[m]
-                    array[m] = array[i]
-                    array[i] = t
-                }
-                return array
-            }
-            console.log(shuffle(currentAlphabetArr))
+            shuffle(currentAlphabetArr)
         }
         //알파벳 색깔 교체
         function alphabetsColorChange(){
@@ -197,25 +186,15 @@ function AtWord(){
                 i.style.color = "#6a6a6a";
                 alphabets[index].style.background = "#707070";
                 alphabets[index].style.color = "#fff"
-                leftBtn.style.opacity = '0.8'
+                leftBtn.style.opacity = '0.3'
             })
         }
     })
-    //next prev 이미지 변경
-    const leftBtn = document.querySelector('.leftBtn');
-    const rightBtn = document.querySelector('.rightBtn');
-    leftBtn.addEventListener('mousedown',function(){
-        leftBtn.src = "img/prevclicktheBtn.png";
-    })
-    leftBtn.addEventListener('mouseup',function(){
-        leftBtn.src = "img/leftbtn.png";
-    })
-    rightBtn.addEventListener('mousedown',function(){
-        rightBtn.src = "img/nextclicktheBtn.png";
-    })
-    rightBtn.addEventListener('mouseup',function(){
-        rightBtn.src = "img/rightbtn.png";
-    })
+    //버튼클릭시 이미지 변경
+    leftBtn.addEventListener('mousedown',leftMouseDownImgChange)
+    leftBtn.addEventListener('mouseup',leftMouseUpImgChange)
+    rightBtn.addEventListener('mousedown',rightMouseDownImgChange)
+    rightBtn.addEventListener('mouseup',rightMouseUpImgChange)
     //더블클릭할땐 currentAlphabet 27로 설정
     const dubbleClick = document.querySelector('.alphabet')
     dubbleClick.addEventListener('dblclick',function(){
@@ -239,7 +218,6 @@ function AtWord(){
             console.log(currentWord)
         }
         function prevAlphabetChange(){
-            var currentAlphabetArr = wordsArr[currentAlphabet]
             if(currentWord > 0 ){
                 rightBtn.removeAttribute('disable')
                 currentWord = currentWord -1;
@@ -283,11 +261,9 @@ function AtWord(){
             change_word_En.style.opacity = '1'
         }
     })
-    //addWord_words li에 있는 단어들을 배열로 만들어야해 그러면 ...
     //Set객체로 중복되는 배열 생성 X 
     const addWord_wordsList = document.querySelector('.addWord_words');
     let addWordArr = new Set();
-
     add.addEventListener('click',addWord)
     //addWordArr안에 li 생성 
     //그 안에 p 생성  
@@ -296,6 +272,7 @@ function AtWord(){
         //배열에 추가 Set는 add를 사용해서 추가 push아님
         //배열이랑 해당하는 단어랑 비교에서 배열안에 있으면 단어추가 안됨!
         //배열에 includes로 배열을 검색해서 중복되는지 확인 !
+        //Set을 배열로 만드는법 [ ...배열이름 ]
         if([...addWordArr].includes(change_word_En.innerHTML) == false){
             //중복이 안되면 li추가 !!
             const li = document.createElement('li');
@@ -306,18 +283,125 @@ function AtWord(){
         }
         //배열에 단어추가하기 !
         addWordArr.add(change_word_En.innerHTML)
-        //Set 배열 확인하는법 [ ...배열이름 ] 
-        // console.log([...addWordArr])
     }
 }
 AtWord()
 
 
-
 ////////////////////// 핵맨 /////////////////////////
+function Atgame1(){
+    const gameRightBtn = document.querySelector('.game_right_Btn');
+    gameRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
+    gameRightBtn.addEventListener('mouseup',rightMouseUpImgChange)
+    const input = document.querySelector('.inputValue');
+    const game_HowManyWords = document.querySelector('.game_HowManyWords')
+    const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
+    const game_word_alphabet = document.querySelectorAll('.game_word_alphabet')
+    let game_meaning_kr1 = document.querySelector('.game_meaning_kr1');
+    let game_meaning_kr2 = document.querySelector('.game_meaning_kr2');
+    let game_meaning_kr3 = document.querySelector('.game_meaning_kr3');
+    let leftLife = document.querySelector('.leftLife');
+    // 현재 단어 순번!
+    currentWord = 0
+    let life = 7
+    
+    
+    // 보여진 단어들 배열에 넣기
+    let result
+    let gameWord = []
+    gameRightBtn.addEventListener('click',function(){
+        lnit(game_word_alphabet)
+        randomWord()
+    })
+    input.addEventListener('focusin',function(){
+        input.placeholder = "";
+    })
+    input.addEventListener('focusout',function(){
+        input.placeholder = "GoGo!";
+    })
+    input.addEventListener('change',printValue)
+    //방향눌렀을때 기존에있던 단어(li) 지우기 
+    function lnit(){
+        game_word_alphabet.forEach( i => {
+            i.remove()
+        })
+        input.style.display = 'block';
+        leftLife.innerHTML = '7'
+        life = 7
+    }
 
+    //랜덤단어불러오기
+    function randomWord(){
+        //알파벳 종류를 먼저 선별
+        randomArr = Math.floor(Math.random() * wordsArr.length)
+        let gameRandomWords = wordsArr[randomArr]
+        // 고른 알파벳에서 랜덤으로 선별 !
+        let randomArr2 = Math.floor(Math.random() * gameRandomWords.length)
 
+        //가져온 단어 변수에 담기
+        let randomWord = gameRandomWords[randomArr2].word_En;
+        let randomWordKr1 = gameRandomWords[randomArr2].meaning_Kr1;
+        let randomWordKr2 = gameRandomWords[randomArr2].meaning_Kr2;
+        let randomWordKr3 = gameRandomWords[randomArr2].meaning_Kr3;
+        
+        //한글뜻 넣기 
+        game_meaning_kr1.innerHTML = randomWordKr1;
+        game_meaning_kr2.innerHTML = randomWordKr2;
+        game_meaning_kr3.innerHTML = randomWordKr3;
+        
+        //가져온 단어를 하나씩 나누기
+        let splitAlphabet = /[a-z]/gi;
+        result = randomWord.match(splitAlphabet);
 
+        // 단어 하나하나를 알파벳으로 나눠서 li 추가 & 클래스 추가 !!
+        let litext ='';
+        result.forEach( i => {
+            litext = litext+`<li class='game_word_alphabet'>
+                                <p>${i}</p>
+                             </li>`
+        })
+
+        //가져온 단어 배열에 넣기 !
+        game_HowManyWords.innerHTML = litext;
+        gameWord.push(randomWord)
+        console.log(randomWord)
+
+        //배열에 넣고 그 단어 순번 정해주기 !
+        currentWord = currentWord + 1
+        console.log(currentWord)
+    }
+
+    //input에 value값 받아오기
+    function printValue()  {
+        let inputValue = input.value;
+        const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
+        //input에 입력창다시 비우기 
+        input.value = ""
+        console.log(result)
+        console.log(inputValue)
+        console.log(life)
+        //포함되는 값이 있으면 opacity 1로 변경 
+        //포함되는 값이 있으면 배열에서 삭제 (같은값을 입력했을 때 방지)
+        game_word_text.forEach( i => {
+            if(inputValue == i.innerHTML ){
+                i.style.opacity = '1'
+            }
+        })
+        //틀리면 life하나 깎임
+        if( result.includes(inputValue) == false ){
+            life = life - 1;
+            leftLife.innerHTML = life;
+            if(life == 0 ){
+                input.style.display = 'none'
+            }
+            else{
+                input.style.display = 'block'
+            }
+        }
+
+    }
+}
+Atgame1()
 
 
 ///////////////////// 단어 퀴즈 /////////////////////

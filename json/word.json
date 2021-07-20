@@ -75,7 +75,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"ap·peal",
+            "word_En":"appeal",
             "word_En_pron":"[ əˈpiːl ]",
             "meaning_Kr1":"항소(抗訴), 상고(上告)",
             "meaning_Kr1_sen":"to lodge an appeal",
@@ -89,7 +89,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"ap·pear",
+            "word_En":"appear",
             "word_En_pron":"[ əˈpɪr ]",
             "meaning_Kr1":"…인 것 같다",
             "meaning_Kr1_sen":"She didn’t appear at all surprised at the news.",
@@ -103,7 +103,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"ac·cept",
+            "word_En":"accept",
             "word_En_pron":"[ əkˈsept ]",
             "meaning_Kr1":"(기꺼이) 받아들이다",
             "meaning_Kr1_sen":"He asked me to marry him and I accepted.",
@@ -117,7 +117,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"ac·count",
+            "word_En":"account",
             "word_En_pron":"[ əˈkaʊnt ]",
             "meaning_Kr1":"계좌",
             "meaning_Kr1_sen":"I don’t have a bank account.",
@@ -217,7 +217,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"bene·fit",
+            "word_En":"benefit",
             "word_En_pron":"[ ˈbenɪfɪt ]",
             "meaning_Kr1":"혜택, 이득",
             "meaning_Kr1_sen":"I’ve had the benefit of a good education.",
@@ -231,7 +231,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"bless ",
+            "word_En":"bless",
             "word_En_pron":"[ bles ]",
             "meaning_Kr1":"(신의) 가호[축복]를 빌다",
             "meaning_Kr1_sen":"They brought the children to Jesus and he blessed them.",
@@ -259,7 +259,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"be·come",
+            "word_En":"become",
             "word_En_pron":"[ bɪˈkʌm ]",
             "meaning_Kr1":"…(해)지다, …이 되다",
             "meaning_Kr1_sen":" was becoming more and more difficult to live on his salary.",
@@ -303,7 +303,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"con·di·tion",
+            "word_En":"condition",
             "word_En_pron":"[ kənˈdɪʃn ]",
             "meaning_Kr1":"상태",
             "meaning_Kr1_sen":"to be in bad/good/excellent condition",
@@ -331,7 +331,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"com·mit",
+            "word_En":"commit",
             "word_En_pron":"[ kəˈmɪt ]",
             "meaning_Kr1":"(그릇된 일·범죄를) 저지르다",
             "meaning_Kr1_sen":"to commit murder/adultery",
@@ -345,7 +345,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"cer·tain",
+            "word_En":"certain",
             "word_En_pron":"[ ˈsɜːrtn ]",
             "meaning_Kr1":"확실한, 틀림없는",
             "meaning_Kr1_sen":"It is certain that they will agree / They are certain to agree.",
@@ -359,7 +359,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"con·cern",
+            "word_En":"concern",
             "word_En_pron":"[ kən|sɜːrn ]",
             "meaning_Kr1":"(사람에게) 영향을 미치다",
             "meaning_Kr1_sen":"Don’t interfere in what doesn’t concern you.",
@@ -373,7 +373,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"cap·acity",
+            "word_En":"capacity",
             "word_En_pron":"[ kəˈpæsəti ]",
             "meaning_Kr1":"용량; 수용력",
             "meaning_Kr1_sen":"The theatre has a seating capacity of 2,000.",
@@ -387,7 +387,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"com·mit·ment",
+            "word_En":"commitment",
             "word_En_pron":"[ kəˈmɪtmənt ]",
             "meaning_Kr1":"약속; 전념",
             "meaning_Kr1_sen":"She doesn’t want to make a big emotional commitment to Steve at the moment.",
@@ -401,7 +401,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"col·lapse",
+            "word_En":"collapse",
             "word_En_pron":"[ kəˈlæps ]",
             "meaning_Kr1":"붕괴되다, 무너지다",
             "meaning_Kr1_sen":"The roof collapsed under the weight of snow.",
@@ -415,7 +415,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"cer·tifi·cate",
+            "word_En":"certificate",
             "word_En_pron":"",
             "meaning_Kr1":"증서, 증명서",
             "meaning_Kr1_sen":"a birth/marriage/death certificate",
@@ -431,7 +431,7 @@ words = {
     "d_word":[
         {
             "wordImg":"",
-            "word_En":"de·posit",
+            "word_En":"deposit",
             "word_En_pron":"[ dɪ|pɑːzɪt ]",
             "meaning_Kr1":"(지불할 돈의 일부로 처음에 내는) 착수금",
             "meaning_Kr1_sen":"We’ve put down a 5% deposit on the house.",
@@ -445,7 +445,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"dir·ect",
+            "word_En":"direct",
             "word_En_pron":"[ də|rekt; dɪ|rekt; daɪ|rekt ]",
             "meaning_Kr1":"(중간에 제삼자나 매개물 없이) 직접적인",
             "meaning_Kr1_sen":"They are in direct contact with the hijackers.",
@@ -473,7 +473,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"de·gree",
+            "word_En":"degree",
             "word_En_pron":"[ dɪˈɡriː ]",
             "meaning_Kr1":"(각도의 단위인) 도",
             "meaning_Kr1_sen":"an angle of ninety degrees (90°)",
@@ -487,7 +487,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"de·velop",
+            "word_En":"develop",
             "word_En_pron":"[ dɪˈveləp ]",
             "meaning_Kr1":"성장하다",
             "meaning_Kr1_sen":"The child is developing normally.",
@@ -501,7 +501,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"dis·cip·line",
+            "word_En":"discipline",
             "word_En_pron":"[ ˈdɪsəplɪn ]",
             "meaning_Kr1":"규율, 훈육",
             "meaning_Kr1_sen":"The school has a reputation for high standards of discipline.",
@@ -515,7 +515,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"de·cline",
+            "word_En":"decline",
             "word_En_pron":"[ dɪˈklaɪn ]",
             "meaning_Kr1":"(수가치품질 등의 지속적인) 감소",
             "meaning_Kr1_sen":"a rapid/sharp/gradual decline",
@@ -529,7 +529,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"de·ter·mine",
+            "word_En":"determine",
             "word_En_pron":"[ dɪ|tɜːrmɪn ]",
             "meaning_Kr1":"알아내다, 밝히다",
             "meaning_Kr1_sen":" An inquiry was set up to determine the cause of the accident.",
@@ -543,7 +543,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"des·per·ate",
+            "word_En":"desperate",
             "word_En_pron":" [ˈdespərət ]",
             "meaning_Kr1":"자포자기한, 발악하는, 될 대로 되라는 식의",
             "meaning_Kr1_sen":"The prisoners grew increasingly desperate.",
@@ -557,7 +557,7 @@ words = {
         },
         {
             "wordImg":"",
-            "word_En":"dem·on·strate",
+            "word_En":"demonstrate",
             "word_En_pron":"[ ˈdemənstreɪt ]",
             "meaning_Kr1":"증거를 들어가며 보여주다, 입증하다",
             "meaning_Kr1_sen":"These results demonstrate convincingly that our campaign is working.",
