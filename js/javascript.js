@@ -301,9 +301,11 @@ function Atgame1(){
     let game_meaning_kr2 = document.querySelector('.game_meaning_kr2');
     let game_meaning_kr3 = document.querySelector('.game_meaning_kr3');
     let leftLife = document.querySelector('.leftLife');
+    let lifeImg = document.querySelector('.lifeImg');
     // 현재 단어 순번!
     currentWord = 0
     let life = 7
+    let gamePoint = 0
     
     
     // 보여진 단어들 배열에 넣기
@@ -328,6 +330,9 @@ function Atgame1(){
         input.style.display = 'block';
         leftLife.innerHTML = '7'
         life = 7
+        input.maxlength = '1'
+        gamePoint = 0 
+        lifeImg.src  = 'img/life.png'
     }
 
     //랜덤단어불러오기
@@ -380,11 +385,15 @@ function Atgame1(){
         console.log(result)
         console.log(inputValue)
         console.log(life)
+
         //포함되는 값이 있으면 opacity 1로 변경 
         //포함되는 값이 있으면 배열에서 삭제 (같은값을 입력했을 때 방지)
         game_word_text.forEach( i => {
-            if(inputValue == i.innerHTML ){
+            if( i.innerHTML.includes(inputValue) == true ){
                 i.style.opacity = '1'
+                //단어점수 1 점획득 --> 알파벳갯수 만큼 점수를 얻으면 승리! 
+                gamePoint = gamePoint + 1
+                return gamePoint;
             }
         })
         //틀리면 life하나 깎임
@@ -393,12 +402,19 @@ function Atgame1(){
             leftLife.innerHTML = life;
             if(life == 0 ){
                 input.style.display = 'none'
+                lifeImg.src = 'img/gameLose.png'
             }
             else{
                 input.style.display = 'block'
             }
         }
-
+        //획득한 점수와 단어의 길이가 같으면 input Off
+        if(gamePoint == result.length ){
+            input.style.display = 'none'
+            lifeImg.src = 'img/gameWin.png'
+        }
+        console.log(gamePoint);
+        console.log(result.length)
     }
 }
 Atgame1()
@@ -409,10 +425,22 @@ function AtQuiz(){
     //스타트버튼 누르기 ! 
     var start_btn = document.querySelector('.start_btn');
     const start_game = document.querySelector('.start_game');
+    let time = 10
+    let leftTime = document.querySelector('.leftTime');
+
+    //start버튼 눌렀을때 시간초 재생
     start_game.addEventListener('click',function(){
         start_btn.style.display = 'none'
+        //10초 타이머
+        var Timer = setInterval(function(){
+            time = time -1
+            leftTime.innerHTML = time;
+            // 0이되면 멈춰라
+            if(time==0){
+                clearInterval(Timer);
+            }
+        }, 1000);
     })
-
 }
 AtQuiz()
 
