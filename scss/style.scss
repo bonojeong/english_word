@@ -360,7 +360,7 @@ body{
             .quiz_direction{
                 display: flex;
                 width: 90%;
-                justify-content: space-between;
+                justify-content: flex-end;
                 padding-bottom: 20px;
                 .quiz_prev{
                     display: flex;

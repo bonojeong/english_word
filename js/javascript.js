@@ -97,17 +97,6 @@ function shuffle(array) {
     return array
 }
 
-//버튼누를때 이미지 변경
-function btnImgChange(){
-    
-    const quizLeftBtn = document.querySelector('.quiz_left_Btn');
-    const quizRightBtn = document.querySelector('.quiz_right_Btn');
-    quizLeftBtn.addEventListener('mousedown',leftMouseDownImgChange)
-    quizLeftBtn.addEventListener('mouseup',leftMouseUpImgChange)
-    quizRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
-    quizRightBtn.addEventListener('mouseup',rightMouseUpImgChange)
-}
-
 // 버튼 클릭시 이미지 변경
 function leftMouseDownImgChange(){
     this.src = "img/prevclicktheBtn.png";
@@ -422,20 +411,47 @@ function AtQuiz(){
     const start_game = document.querySelector('.start_game');
     let time = 10
     let leftTime = document.querySelector('.leftTime');
+    let number_number = document.querySelectorAll('.number_number');
+    let quest_correct = document.querySelectorAll('.quest_correct');
+    let quest_wrong = document.querySelectorAll('.quest_wrong');
+    const quizRightBtn = document.querySelector('.quiz_right_Btn');
+    const question_word = document.querySelector('.question_word');
 
+    //다음문제 버튼 클릭시 이미지 변경
+    quizRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
+    quizRightBtn.addEventListener('mouseup',rightMouseUpImgChange)
+    quizRightBtn.addEventListener('click',function(){
+        init()
+        QuizRandomWord()
+    })
+    
     //start버튼 눌렀을때 시간초 재생
     start_game.addEventListener('click',function(){
         start_btn.style.display = 'none'
         //10초 타이머
-        var Timer = setInterval(function(){
-            time = time -1
-            leftTime.innerHTML = time;
-            // 0이되면 멈춰라
-            if(time==0){
-                clearInterval(Timer);
-            }
-        }, 1000);
+        
     })
+    //각각의 번호에 이미지보이기 이벤트 추가
+    number_number.forEach( (i , e) => {
+        i.addEventListener('click',function(){
+            quest_wrong[e].style.display = 'unset'
+        })
+    })
+    function QuizRandomWord(){
+        //알파벳 종류를 먼저 선별
+        randomArr = Math.floor(Math.random() * wordsArr.length)
+        let quizRandomWords = wordsArr[randomArr]
+        // 고른 알파벳에서 랜덤으로 선별 !
+        let quizRandomArr2 = Math.floor(Math.random() * quizRandomWords.length)
+
+        //가져온 단어 변수에 담기
+        let quizWord = quizRandomWords[quizRandomArr2].word_En;
+        console.log(quizWord)
+        question_word.innerHTML = quizWord;
+
+    }
+    function init(){
+    }
 }
 AtQuiz()
 
