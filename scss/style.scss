@@ -349,7 +349,7 @@ body{
                             position: absolute;
                             top: 50%;
                             left: 50%;
-                            transform: translate(-50%, -50%);
+                            transform: translate(-50%, -42%);
                         }
                     }
                     .number_text{
@@ -362,14 +362,6 @@ body{
                 width: 90%;
                 justify-content: flex-end;
                 padding-bottom: 20px;
-                .quiz_prev{
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    img{
-                        margin-right: 20px;
-                    }
-                }
                 .quiz_next{
                     display: flex;
                     align-items: center;

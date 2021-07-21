@@ -162,11 +162,14 @@ function AtWord(){
         function alphabetsCheckAndShuffle(){
             //알파벳 누를때마다 currentWord 순번 0으로 초기화
             currentWord = 0
+            console.log(currentWord)
             //알파벳 번호 currentAlphabet 변경
             currentAlphabet = index;
             //currentAlphabet의 값에 따라 단어 배열 가져오고
             var currentAlphabetArr = wordsArr[currentAlphabet]
             shuffle(currentAlphabetArr)
+            rightBtn.style.opacity = '1';
+            
         }
         //알파벳 색깔 교체
         function alphabetsColorChange(){
@@ -190,6 +193,8 @@ function AtWord(){
         currentAlphabet = 27
         console.log(currentAlphabet)
     })
+
+    //단어 처음이나 끝으로가면 버튼 스타일변화
     const showWord = function(){
         function nextAlphabetChange(){
             var currentAlphabetArr = wordsArr[currentAlphabet]
@@ -440,9 +445,14 @@ function AtQuiz(){
         timer = setInterval(function(){
             time = time -1
             leftTime.innerHTML = time;
-            console.log(time)
+            //0초가 되면 답을 알려줌 
             if( time == 0){
                 stopTimer()
+                number_text.forEach ((i,e) => {
+                    if( i.innerHTML == correctArr[correctArr.length -1]){
+                        quest_correct[e].style.display = 'unset'
+                    }
+                })
             }
         },1000)
     }
@@ -452,10 +462,15 @@ function AtQuiz(){
     }
 
     //각각의 번호에 이미지보이기 이벤트 추가
+    //정답을 배열에 추가해서 마지막배열과 클릭한 텍스트를 비교해서 판단함
     number_number.forEach( (i , e) => {
         i.addEventListener('click',function(){
-            quest_wrong[e].style.display = 'unset'
-            stopTimer()
+            if( number_text[e].innerHTML == correctArr[correctArr.length -1]){
+                quest_correct[e].style.display = 'unset'
+                stopTimer()
+            }else{
+                quest_wrong[e].style.display = 'unset'
+            }
         })
     })
 
@@ -472,7 +487,6 @@ function AtQuiz(){
         Randomfunction()
         //가져온 단어 변수에 담기
         let quizWord = quizRandomWords[quizRandomArr2].word_En;
-        console.log(quizWord)
         question_word.innerHTML = quizWord;
 
         //보기 랜덤으로 추출 ! 
@@ -483,26 +497,29 @@ function AtQuiz(){
         correctArr.push(number_text[randomNum].innerHTML);
         //정답을 배열에 넣어서 그 배열의 마지막의 값이랑 새로들어갈 보기의 값이랑 비교해서 
         //같으면 랜덤을 한번더 돌린다 ! 
-        console.log(correctArr)
-        console.log(number_text[randomNum].innerHTML.length)
-
         number_text.forEach( i => {
             Randomfunction()
             quizWordKr = quizRandomWords[quizRandomArr2].meaning_Kr1
-            if( number_text[i].innerHTML.length == 0 ){
+
+            //보기의 단어길이가 0 이고 정답과의 단어와 겹치지 않으면 단어 생성
+            if( i.innerHTML.length == 0 ){
                 if(quizWordKr != number_text[randomNum].innerHTML){
-                    return quizWordKr;
+                    i.innerHTML = quizWordKr
                 }
+                //정답이랑 단어가 겹치면 랜덤 다시 ! 
                 else{
                     Randomfunction()
                     quizWordKr = quizRandomWords[quizRandomArr2].meaning_Kr1
-                    return quizWordKr;
+                    i.innerHTML = quizWordKr
                 }
             }else {
                 return ; 
             }
         })
     }
+    //보기를 눌렀을때 정답이랑 비교해서 같으면 o 아니면 x 나오면서 clearTimeout발동
+    
+
 
     function init(){
         leftTime.innerHTML = 10
@@ -511,6 +528,12 @@ function AtQuiz(){
         startTimer()
         number_text.forEach ( i => {
             i.innerHTML = ""
+        })
+        quest_correct.forEach ( i => {
+            i.style.display = 'none'
+        })
+        quest_wrong.forEach ( i => {
+            i.style.display = 'none'
         })
     }
 }
