@@ -282,7 +282,7 @@ function AtWord(){
 AtWord()
 
 
-////////////////////// 핵맨 /////////////////////////
+////////////////////// 단어추리 /////////////////////////
 function Atgame1(){
     const gameRightBtn = document.querySelector('.game_right_Btn');
     gameRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
@@ -299,6 +299,7 @@ function Atgame1(){
     // 라이프 갯수!!
     let life = 7
     let gamePoint = 0
+    let deleteAlphabets = []
     
     
     // 보여진 단어들 배열에 넣기
@@ -324,7 +325,7 @@ function Atgame1(){
         leftLife.innerHTML = '7'
         life = 7
         input.maxlength = '1'
-        gamePoint = 0 
+        gamePoint = 0      
         lifeImg.src  = 'img/life.png'
     }
 
@@ -369,41 +370,42 @@ function Atgame1(){
     function printValue()  {
         let inputValue = input.value;
         const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
+        wrongWord = 0
         //input에 입력창다시 비우기 
         input.value = ""
-        console.log(result)
-        console.log(inputValue)
-        console.log(life)
-
         //포함되는 값이 있으면 opacity 1로 변경 
-        //포함되는 값이 있으면 배열에서 삭제 (같은값을 입력했을 때 방지)
-        game_word_text.forEach( i => {
-            if( i.innerHTML.includes(inputValue) == true ){
-                i.style.opacity = '1'
-                //단어점수 1 점획득 --> 알파벳갯수 만큼 점수를 얻으면 승리! 
-                gamePoint = gamePoint + 1
-                return gamePoint;
-            }
-        })
-        //틀리면 life하나 깎임
-        if( result.includes(inputValue) == false ){
-            life = life - 1;
+        if( result.includes(inputValue) == true){
+            deleteAlphabets = result.indexOf(inputValue);
+            game_word_text.forEach( i => {
+                if( i.innerHTML == inputValue){
+                    i.style.opacity = '1'
+                }
+            })
+            gamePoint = gamePoint + 1
+        }else {
+            life = life - 1
             leftLife.innerHTML = life;
             if(life == 0 ){
+                deleteAlphabets = []
+                gamePoint = 0
                 input.style.display = 'none'
                 lifeImg.src = 'img/gameLose.png'
-            }
-            else{
-                input.style.display = 'block'
+                game_word_text.forEach( i => {
+                    i.style.opacity = '1'
+                })
             }
         }
-        //획득한 점수와 단어의 길이가 같으면 input Off
+        console.log(result)
+        console.log(inputValue)
+        console.log(gamePoint)
+        console.log(life)
+        console.log(deleteAlphabets)
         if(gamePoint == result.length ){
+            deleteAlphabets = []
+            gamePoint = 0
             input.style.display = 'none'
             lifeImg.src = 'img/gameWin.png'
         }
-        console.log(gamePoint);
-        console.log(result.length)
     }
 }
 Atgame1()
