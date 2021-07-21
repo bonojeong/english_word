@@ -406,8 +406,7 @@ Atgame1()
 
 ///////////////////// 단어 퀴즈 /////////////////////
 function AtQuiz(){
-    //스타트버튼 누르기 ! 
-    var start_btn = document.querySelector('.start_btn');
+    let start_btn = document.querySelector('.start_btn');
     const start_game = document.querySelector('.start_game');
     let time = 10
     let leftTime = document.querySelector('.leftTime');
@@ -416,6 +415,9 @@ function AtQuiz(){
     let quest_wrong = document.querySelectorAll('.quest_wrong');
     const quizRightBtn = document.querySelector('.quiz_right_Btn');
     const question_word = document.querySelector('.question_word');
+    const number_text = document.querySelectorAll('.number_text');
+    let correctArr = [];
+    let quizRandomWords, quizRandomArr2, quizWordKr
 
     //다음문제 버튼 클릭시 이미지 변경
     quizRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
@@ -428,29 +430,88 @@ function AtQuiz(){
     //start버튼 눌렀을때 시간초 재생
     start_game.addEventListener('click',function(){
         start_btn.style.display = 'none'
+        QuizRandomWord()
         //10초 타이머
-        
+        startTimer()
+       
     })
+    let timer;
+    function startTimer(){
+        timer = setInterval(function(){
+            time = time -1
+            leftTime.innerHTML = time;
+            console.log(time)
+            if( time == 0){
+                stopTimer()
+            }
+        },1000)
+    }
+    //clearTimeout으로 setinterval을 그냥 종료 ! 정지가 아닌 종료 시킴 !
+    function stopTimer(){
+        clearTimeout(timer)
+    }
+
     //각각의 번호에 이미지보이기 이벤트 추가
     number_number.forEach( (i , e) => {
         i.addEventListener('click',function(){
             quest_wrong[e].style.display = 'unset'
+            stopTimer()
         })
     })
-    function QuizRandomWord(){
+
+    //전체랜덤
+    function Randomfunction(){
         //알파벳 종류를 먼저 선별
         randomArr = Math.floor(Math.random() * wordsArr.length)
-        let quizRandomWords = wordsArr[randomArr]
+        quizRandomWords = wordsArr[randomArr]
         // 고른 알파벳에서 랜덤으로 선별 !
-        let quizRandomArr2 = Math.floor(Math.random() * quizRandomWords.length)
+        quizRandomArr2 = Math.floor(Math.random() * quizRandomWords.length)
+    }
 
+    function QuizRandomWord(){
+        Randomfunction()
         //가져온 단어 변수에 담기
         let quizWord = quizRandomWords[quizRandomArr2].word_En;
         console.log(quizWord)
         question_word.innerHTML = quizWord;
 
+        //보기 랜덤으로 추출 ! 
+        quizWordKr = quizRandomWords[quizRandomArr2].meaning_Kr1;
+        let randomNum = Math.floor(Math.random() * number_number.length)
+        //랜덤으로 뽑아낸 index번호에 텍스트 수정 !
+        number_text[randomNum].innerHTML = quizWordKr
+        correctArr.push(number_text[randomNum].innerHTML);
+        //정답을 배열에 넣어서 그 배열의 마지막의 값이랑 새로들어갈 보기의 값이랑 비교해서 
+        //같으면 랜덤을 한번더 돌린다 ! 
+        console.log(correctArr)
+        console.log(number_text[randomNum].innerHTML.length)
+
+        number_text.forEach( i => {
+            Randomfunction()
+            quizWordKr = quizRandomWords[quizRandomArr2].meaning_Kr1
+            if( number_text[i].innerHTML.length == 0 ){
+                if(quizWordKr != number_text[randomNum].innerHTML){
+                    return quizWordKr;
+                }
+                else{
+                    Randomfunction()
+                    quizWordKr = quizRandomWords[quizRandomArr2].meaning_Kr1
+                    return quizWordKr;
+                }
+            }else {
+                return ; 
+            }
+        })
     }
+
     function init(){
+        leftTime.innerHTML = 10
+        time = 10
+        stopTimer()
+        startTimer()
+        number_text.forEach ( i => {
+            i.innerHTML = ""
+        })
     }
 }
 AtQuiz()
