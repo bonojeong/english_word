@@ -47,7 +47,8 @@ let addWord_words_text = document.querySelectorAll('.addWord_text'); //영단어
 let addWord_words_view = document.querySelector('.addWord_words_view'); // 영단어장 즐겨찾기
 let wB_revise = document.querySelector('.wB_revise');
 let kind_of_wordBook = document.querySelector('.kind_of_wordBook');
-let addP, addLi, whatNumber //생성 p, 생성 li, 생성한단어의 순번
+//생성 p, 생성 li, 생성한단어의 순번, 생성한 단어의 첫번째 알파벳
+let addP, addLi, whatNumber, whatAlphabets
 let wrongP, wrongLi
 //nav 클릭에 따라 섹션 변화
 function navChange(){
@@ -128,6 +129,33 @@ function rightMouseUpImgChange(){
     this.src = "img/rightbtn.png";
 }
 
+function wbShowWord(){
+    let wb_changeImg = document.querySelector('.wb_wordImg')
+    let wb_change_word_En = document.querySelector('.wb_changeWord')
+    let wb_change_word_Pron = document.querySelector('.wb_changePron')
+    let wb_change_word_Kr1 = document.querySelector('.wb_change1Kr')
+    let wb_change_word_Kr1Sen = document.querySelector('.wb_change1Sen')
+    let wb_change_word_Kr1SenKr = document.querySelector('.wb_change1SenKr')
+    let wb_change_word_Kr2 = document.querySelector('.wb_change2Kr')
+    let wb_change_word_Kr2Sen = document.querySelector('.wb_change2Sen')
+    let wb_change_word_Kr2SenKr = document.querySelector('.wb_change2SenKr')
+    let wb_change_word_Kr3 = document.querySelector('.wb_change3Kr')
+    let wb_change_word_Kr3Sen = document.querySelector('.wb_change3Sen')
+    let wb_change_word_Kr3SenKr = document.querySelector('.wb_change3SenKr')
+    console.log(whatNumber) // 누른단어의 배열에서의 몇번째 순서
+    console.log(whatAlphabets) // 누른 단어의 첫번째 알파벳
+    console.log([...addWordArr][whatNumber]) // 누른 영단어
+
+    //텍스트 변화 !!!
+    wb_change_word_En.innerHTML = [...addWordArr][whatNumber]
+
+}
+// let exam = a_word.forEach( (i,e,v) => {
+//     if( i.word_En == 'ask'){
+//         console.log(e)
+//         console.log(v)
+//     }
+// })
 //한번더 누르면 전체 단어 랜덤
 function AtWord(){
     let changeImg = document.querySelector('.wordImg')
@@ -303,7 +331,11 @@ function AtWord(){
                 addWord_words_view.style.display = 'none';
                 wB_revise.style.display = 'flex'
                 //whatNumber에 누른단어의 순번이 몇번째인지 출력
-                whatNumber = [...addWordArr].indexOf(this.innerHTML);            
+                whatNumber = [...addWordArr].indexOf(this.innerHTML);
+                for( let i=0; i<1; i++){
+                    whatAlphabets = [...addWordArr][whatNumber][i]; // 누른 단어의 첫번째 알파벳 추출
+                } 
+                wbShowWord()
             })
         }
         //배열에 단어추가하기 !
@@ -636,27 +668,9 @@ function AtWordBook(){
         wbShowWord()
     })
 
-    function wbShowWord(){
-        let wb_changeImg = document.querySelector('.wb_wordImg')
-        let wb_change_word_En = document.querySelector('.wb_changeWord')
-        let wb_change_word_Pron = document.querySelector('.wb_changePron')
-        let wb_change_word_Kr1 = document.querySelector('.wb_change1Kr')
-        let wb_change_word_Kr1Sen = document.querySelector('.wb_change1Sen')
-        let wb_change_word_Kr1SenKr = document.querySelector('.wb_change1SenKr')
-        let wb_change_word_Kr2 = document.querySelector('.wb_change2Kr')
-        let wb_change_word_Kr2Sen = document.querySelector('.wb_change2Sen')
-        let wb_change_word_Kr2SenKr = document.querySelector('.wb_change2SenKr')
-        let wb_change_word_Kr3 = document.querySelector('.wb_change3Kr')
-        let wb_change_word_Kr3Sen = document.querySelector('.wb_change3Sen')
-        let wb_change_word_Kr3SenKr = document.querySelector('.wb_change3SenKr')
-        console.log(whatNumber)
-        console.log([...addWordArr][whatNumber])
-
-        wb_change_word_En.innerHTML = [...addWordArr][whatNumber]
-    }
-
     //다음단어나 이전단어를 보여줌 
     //해당 단어를 눌렀을때 배열 item이랑 p의 innerHtml이랑 같으면 word번호 출력
     //
 }
 AtWordBook()
+
