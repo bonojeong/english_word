@@ -454,126 +454,12 @@ body{
                     }
                 }
             }
-            .TryQuiz{
-                position: absolute;
-                bottom: 5%;
-                right: 5%;
-                border-radius: 10px;
-                width: 15%;
-                text-align: center;
-                font-size: 1.5rem;
-                background: #fff;
-                color: #707070;
-                border: 1px solid #707070;
-                cursor: pointer;
-                // display: none;
-            }
-            .alert{
-                width: 100%;
-                height: 20%;
-                position: absolute;
-                top: 50%;
-                left: 0;
-                font-size: 1.5rem;
-                transform: translateY(-50%);
-                background: #EEEEEE;
-                border: 1px solid #707070;
-                // display: flex;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                .closeBtn{
-                    position: absolute;
-                    top: 10%;
-                    right: 5%;
-
-                }
-            }
-            .wordBookQuiz{
-                width: 100%;
-                height: 100%;
-                background-color: #CEE3FF;
-                color: #707070;
-                // display: flex;
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-end;
-                .wordBookQuiz_closeBtn{
-                    position: absolute;
-                    top: 5%;
-                    right: 5%;
-                }
-                .wB_question{
-                    width: 100%;
-                    height: 20%;
-                    text-align: center;
-                    .wB_question_word{
-                        font-size: 4rem;
-                    }
-                }
-                .wordBook_number{
-                    width: 80%;
-                    padding-left: 100px;
-                    padding-bottom: 100px;
-                    margin: 0 auto;
-                    height: 50%;
-                    display: flex;
-                    flex-wrap: wrap;
-                    li{
-                        width: 50%;
-                        display: flex;
-                        align-items: center;
-                        // justify-content: space-between;
-                        p{
-                            font-size: 2rem;
-                        }
-                        .wB_number{
-                            cursor: default;
-                            position: relative;
-                            span{
-                                display: none;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                            }
-                        }
-                        .wB_number_text{
-                            cursor: pointer;
-                        }
-                    }
-                }
-                .wB_direction{
-                    display: flex;
-                    width: 90%;
-                    justify-content: space-between;
-                    padding-bottom: 20px;
-                    .wB_prev{
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                        img{
-                            margin-right: 20px;
-                        }
-                    }
-                    .wB_next{
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                        p{
-                            margin-right: 20px;
-                        }
-                    }
-                }
-            }
             .wB_revise{
                 background-color: #CEE3FF;
                 color: #707070;
                 width: 100%;
                 height: 100%;
                 display: none;
-                // display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;

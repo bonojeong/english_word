@@ -35,6 +35,20 @@ let wordsArr = [
     i_word,j_word,k_word,l_word,m_word,n_word,o_word,p_word,q_word,r_word,
     s_word,t_word,u_word,v_word,w_word,x_word,y_word,z_word
 ]
+let leftTime, time, timer
+let header = document.querySelector('header')
+const game_next_text = document.querySelector('.game_next_text'); // 단어추리 텍스트
+let wrongWordsList = new Set(); //틀린 단어 배열
+let addWordArr = new Set(); // 즐겨찾기 단어 배열
+let wrongWord_words = document.querySelector('.wrongWord_words'); // 영단어장 오답단어 ul
+let wrongWord_words_text = document.querySelectorAll('.wrong_word_text'); // 영단어장 오답단어 p
+let addWord_wordsList = document.querySelector('.addWord_words'); // 영단어장 즐겨찾기 ul
+let addWord_words_text = document.querySelectorAll('.addWord_text'); //영단어장 즐겨찾기 p
+let addWord_words_view = document.querySelector('.addWord_words_view'); // 영단어장 즐겨찾기
+let wB_revise = document.querySelector('.wB_revise');
+let kind_of_wordBook = document.querySelector('.kind_of_wordBook');
+let addP, addLi, whatNumber //생성 p, 생성 li, 생성한단어의 순번
+let wrongP, wrongLi
 //nav 클릭에 따라 섹션 변화
 function navChange(){
     const nav = document.querySelectorAll('.nav > div');
@@ -55,6 +69,9 @@ function navChange(){
     })
     //quiz들어갔을 때 start버튼 재생성
     var start_btn = document.querySelector('.start_btn');
+    nav[1].addEventListener('click',function(){
+        game_next_text.innerHTML = "게임시작"
+    })
     nav[2].addEventListener('click',function(){
         start_btn.style.display = 'unset';
     })
@@ -147,17 +164,34 @@ function AtWord(){
     }
     //알파벳 번호를 currentAlphabet로 지정
     let currentAlphabet = 0
+
+    //버튼클릭시 이미지 변경
+    leftBtn.addEventListener('mousedown',leftMouseDownImgChange)
+    leftBtn.addEventListener('mouseup',leftMouseUpImgChange)
+    rightBtn.addEventListener('mousedown',rightMouseDownImgChange)
+    rightBtn.addEventListener('mouseup',rightMouseUpImgChange)
+
     //알파벳 기능 
     alphabets.forEach ((element,index) => {
         element.addEventListener('click',alphabetsColorChange)
         element.addEventListener('click',alphabetsCheckAndShuffle)
         element.addEventListener('click',wordTextChange)
-        element.addEventListener('dblclick',function(){
-            alphabets.forEach ( i => {
-                i.style.background = "none";
-                i.style.color = "#6a6a6a";
-            })
-        })
+
+
+//==============더블클릭하면 전체랜덤 개발예정===========================
+        // element.addEventListener('dblclick',function(){
+        //     alphabets.forEach ( i => {
+        //         i.style.background = "none";
+        //         i.style.color = "#6a6a6a";
+        //     })
+        //     //더블클릭하면 전체 랜덤 
+        //     console.log(wordsArr[1])
+        //     console.log(Math.floor(Math.random() * wordsArr.length))
+        // })
+//==============더블클릭하면 전체랜덤 개발예정===========================
+
+
+
         //셔플
         function alphabetsCheckAndShuffle(){
             //알파벳 누를때마다 currentWord 순번 0으로 초기화
@@ -169,7 +203,6 @@ function AtWord(){
             var currentAlphabetArr = wordsArr[currentAlphabet]
             shuffle(currentAlphabetArr)
             rightBtn.style.opacity = '1';
-            
         }
         //알파벳 색깔 교체
         function alphabetsColorChange(){
@@ -182,18 +215,6 @@ function AtWord(){
             })
         }
     })
-    //버튼클릭시 이미지 변경
-    leftBtn.addEventListener('mousedown',leftMouseDownImgChange)
-    leftBtn.addEventListener('mouseup',leftMouseUpImgChange)
-    rightBtn.addEventListener('mousedown',rightMouseDownImgChange)
-    rightBtn.addEventListener('mouseup',rightMouseUpImgChange)
-    //더블클릭할땐 currentAlphabet 27로 설정
-    const dubbleClick = document.querySelector('.alphabet')
-    dubbleClick.addEventListener('dblclick',function(){
-        currentAlphabet = 27
-        console.log(currentAlphabet)
-    })
-
     //단어 처음이나 끝으로가면 버튼 스타일변화
     const showWord = function(){
         function nextAlphabetChange(){
@@ -255,9 +276,6 @@ function AtWord(){
             change_word_En.style.opacity = '1'
         }
     })
-    //Set객체로 중복되는 배열 생성 X 
-    const addWord_wordsList = document.querySelector('.addWord_words');
-    let addWordArr = new Set();
     add.addEventListener('click',addWord)
     //addWordArr안에 li 생성 
     //그 안에 p 생성  
@@ -269,19 +287,30 @@ function AtWord(){
         //Set을 배열로 만드는법 [ ...배열이름 ]
         if([...addWordArr].includes(change_word_En.innerHTML) == false){
             //중복이 안되면 li추가 !!
-            const li = document.createElement('li');
-            const p = document.createElement('p');
-            p.append(change_word_En.innerHTML);
-            addWord_wordsList.append(li);
-            li.append(p)
+            addLi = document.createElement('li');
+            addP = document.createElement('p');
+            addP.classList.add('addWord_text')
+            addP.append(change_word_En.innerHTML);
+            addWord_wordsList.append(addLi);
+            addLi.append(addP)
+
+            //새로만든 리스트에 이벤트 추가 추가해서 
+            // 눌렀을때 설명보여줌
+            //보여주고 리스트 순서대로 
+            addP.addEventListener('click',function(){
+                header.style.display = "none"
+                kind_of_wordBook.style.display = 'none'
+                addWord_words_view.style.display = 'none';
+                wB_revise.style.display = 'flex'
+                //whatNumber에 누른단어의 순번이 몇번째인지 출력
+                whatNumber = [...addWordArr].indexOf(this.innerHTML);            
+            })
         }
         //배열에 단어추가하기 !
         addWordArr.add(change_word_En.innerHTML)
     }
 }
 AtWord()
-
-
 ////////////////////// 단어추리 /////////////////////////
 function Atgame1(){
     const gameRightBtn = document.querySelector('.game_right_Btn');
@@ -291,6 +320,7 @@ function Atgame1(){
     const game_HowManyWords = document.querySelector('.game_HowManyWords')
     const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
     const game_word_alphabet = document.querySelectorAll('.game_word_alphabet')
+    
     let game_meaning_kr1 = document.querySelector('.game_meaning_kr1');
     let game_meaning_kr2 = document.querySelector('.game_meaning_kr2');
     let game_meaning_kr3 = document.querySelector('.game_meaning_kr3');
@@ -299,7 +329,6 @@ function Atgame1(){
     // 라이프 갯수!!
     let life = 7
     let gamePoint = 0
-    let deleteAlphabets = []
     
     
     // 보여진 단어들 배열에 넣기
@@ -308,6 +337,7 @@ function Atgame1(){
     gameRightBtn.addEventListener('click',function(){
         lnit(game_word_alphabet)
         randomWord()
+        game_next_text.innerHTML = "다음문제"
     })
     input.addEventListener('focusin',function(){
         input.placeholder = "";
@@ -324,6 +354,7 @@ function Atgame1(){
         input.style.display = 'block';
         leftLife.innerHTML = '7'
         life = 7
+        input.value = ""
         input.maxlength = '1'
         gamePoint = 0      
         lifeImg.src  = 'img/life.png'
@@ -375,18 +406,21 @@ function Atgame1(){
         input.value = ""
         //포함되는 값이 있으면 opacity 1로 변경 
         if( result.includes(inputValue) == true){
-            deleteAlphabets = result.indexOf(inputValue);
+            result.forEach( (i,e) => {
+                if ( i == inputValue){
+                    result[e] = ''; // 배열에 같은 값은 공백으로 만들어준다
+                    gamePoint = gamePoint + 1 // 중복된 알파벳전부계산해서 점수 +
+                }
+            })
             game_word_text.forEach( i => {
                 if( i.innerHTML == inputValue){
                     i.style.opacity = '1'
                 }
             })
-            gamePoint = gamePoint + 1
         }else {
             life = life - 1
             leftLife.innerHTML = life;
             if(life == 0 ){
-                deleteAlphabets = []
                 gamePoint = 0
                 input.style.display = 'none'
                 lifeImg.src = 'img/gameLose.png'
@@ -399,9 +433,7 @@ function Atgame1(){
         console.log(inputValue)
         console.log(gamePoint)
         console.log(life)
-        console.log(deleteAlphabets)
         if(gamePoint == result.length ){
-            deleteAlphabets = []
             gamePoint = 0
             input.style.display = 'none'
             lifeImg.src = 'img/gameWin.png'
@@ -410,13 +442,12 @@ function Atgame1(){
 }
 Atgame1()
 
-
 ///////////////////// 단어 퀴즈 /////////////////////
 function AtQuiz(){
     let start_btn = document.querySelector('.start_btn');
     const start_game = document.querySelector('.start_game');
-    let time = 10
-    let leftTime = document.querySelector('.leftTime');
+    time = 10
+    leftTime = document.querySelector('.leftTime');
     let number_number = document.querySelectorAll('.number_number');
     let quest_correct = document.querySelectorAll('.quest_correct');
     let quest_wrong = document.querySelectorAll('.quest_wrong');
@@ -425,6 +456,7 @@ function AtQuiz(){
     const number_text = document.querySelectorAll('.number_text');
     let correctArr = [];
     let quizRandomWords, quizRandomArr2, quizWordKr
+    
 
     //다음문제 버튼 클릭시 이미지 변경
     quizRightBtn.addEventListener('mousedown',rightMouseDownImgChange)
@@ -436,13 +468,11 @@ function AtQuiz(){
     
     //start버튼 눌렀을때 시간초 재생
     start_game.addEventListener('click',function(){
+        init()
         start_btn.style.display = 'none'
         QuizRandomWord()
         //10초 타이머
-        startTimer()
-       
     })
-    let timer;
     function startTimer(){
         timer = setInterval(function(){
             time = time -1
@@ -472,9 +502,26 @@ function AtQuiz(){
                 stopTimer()
             }else{
                 quest_wrong[e].style.display = 'unset'
+                //눌렀을때 틀리면 배열에 추가 ! 
+                addWrongWord()
+                console.log(question_word.innerHTML)
             }
         })
     })
+    //Set객체로 중복되는 배열 생성 X 
+    function addWrongWord(){
+        //문제의 영단어가 배열에 없을 때만 영단어장에 추가 ! 
+        if([...wrongWordsList].includes(question_word.innerHTML) == false){
+            const li = document.createElement('li'); // li생성
+            const p = document.createElement('p'); // p생성
+            p.classList.add('wrong_word_text')
+            p.append(question_word.innerHTML); // p에 보기 문제 생성
+            wrongWord_words.append(li); //
+            li.append(p)
+        }
+        wrongWordsList.add(question_word.innerHTML) // set객체에 문제영단어 추가
+        console.log(wrongWordsList)
+    }
 
     //전체랜덤
     function Randomfunction(){
@@ -489,7 +536,7 @@ function AtQuiz(){
         Randomfunction()
         //가져온 단어 변수에 담기
         let quizWord = quizRandomWords[quizRandomArr2].word_En;
-        question_word.innerHTML = quizWord;
+        question_word.innerHTML = quizWord; //문제 영단어
 
         //보기 랜덤으로 추출 ! 
         quizWordKr = quizRandomWords[quizRandomArr2].meaning_Kr1;
@@ -541,7 +588,6 @@ function AtQuiz(){
 }
 AtQuiz()
 
-
 ///////////////////// 영단어장 //////////////////////
 
 //단어장 선택
@@ -549,7 +595,9 @@ function AtWordBook(){
     const wrongWords = document.querySelector('.wrongWords');
     const addWord = document.querySelector('.addWord');
     const wrongWord_words_view = document.querySelector('.wrongWord_words_view');
-    const addWord_words_view = document.querySelector('.addWord_words_view');
+    let wordBookrevise_closeBtn = document.querySelector('.wordBookrevise_closeBtn');
+    let wB_leftBtn = document.querySelector('.wB_leftBtn')
+    let wB_rightBtn = document.querySelector('.wB_rightBtn')
     wrongWords.addEventListener('click',function(){
         wrongWords.style.background = '#707070';
         wrongWords.style.color = '#fff';
@@ -557,6 +605,7 @@ function AtWordBook(){
         addWord.style.color = '#707070';
         wrongWord_words_view.style.display = 'unset';
         addWord_words_view.style.display = 'none';
+        console.log([...wrongWordsList])
     })
     addWord.addEventListener('click',function(){
         wrongWords.style.background = '#fff';
@@ -566,60 +615,48 @@ function AtWordBook(){
         wrongWord_words_view.style.display = 'none';
         addWord_words_view.style.display = 'unset';
     })
-    // 선택한 단어장에서 문제풀기 ! 
-    const tryQuiz = document.querySelector('.TryQuiz');
-    const wordBookQuiz = document.querySelector('.wordBookQuiz');
-    const kind_of_wordBook = document.querySelector('.kind_of_wordBook');
-    const header = document.querySelector('header');
-    //문제풀기 눌렀을 때 ! 
-    function TryQuiz(){
-        tryQuiz.addEventListener('mousedown',function(){
-            tryQuiz.style.background = '#707070';
-            tryQuiz.style.color = '#fff';
-            wrongWord_words_view.style.display = 'none';
-            addWord_words_view.style.display = 'none';
-            kind_of_wordBook.style.display = 'none';
-            header.style.display = 'none';
-        })
-        tryQuiz.addEventListener('mouseup',function(){
-            tryQuiz.style.background = '#fff';
-            tryQuiz.style.color = '#707070';
-            tryQuiz.style.display = 'none';
-            wordBookQuiz.style.display = 'flex';
-        })
-    }
-    TryQuiz()
-    
-    //문제풀기 닫기 버튼을 눌렀을 때!
-    const wordBookQuiz_closeBtn = document.querySelector('.wordBookQuiz_closeBtn');
-    function closeWBQuiz(){
-        wordBookQuiz_closeBtn.addEventListener('click',function(){
-            wordBookQuiz.style.display = 'none';
-            header.style.display = 'unset';
-            kind_of_wordBook.style.display = 'flex';
-            wrongWord_words_view.style.display = 'unset';
-            tryQuiz.style.display = 'unset';
-        })
-    }
-    closeWBQuiz()
+    wordBookrevise_closeBtn.addEventListener('click',function(){
+        header.style.display = "unset"
+        kind_of_wordBook.style.display = 'flex'
+        addWord_words_view.style.display = 'block';
+        wB_revise.style.display = 'none'
+    })
+    wB_leftBtn.addEventListener('mousedown',leftMouseDownImgChange)
+    wB_leftBtn.addEventListener('mouseup',leftMouseUpImgChange)
+    wB_rightBtn.addEventListener('mousedown',rightMouseDownImgChange)
+    wB_rightBtn.addEventListener('mouseup',rightMouseUpImgChange)
 
-    const wB_prev_Img= document.querySelector('.wB_prev_Img')
-    const wB_next_Img= document.querySelector('.wB_next_Img')
-    //영단어장 퀴즈에서 방향이미지 클릭시 교체
-    function wB_DirectionImgChange(){
-        wB_prev_Img.addEventListener('mousedown',function(){
-            wB_prev_Img.src = "img/prevclicktheBtn.png";
-        })
-        wB_prev_Img.addEventListener('mouseup',function(){
-            wB_prev_Img.src = "img/leftbtn.png";
-        })
-        wB_next_Img.addEventListener('mousedown',function(){
-            wB_next_Img.src = "img/nextclicktheBtn.png";
-        })
-        wB_next_Img.addEventListener('mouseup',function(){
-            wB_next_Img.src = "img/rightbtn.png";
-        })
+    wB_leftBtn.addEventListener('click',function(){
+        whatNumber = whatNumber-1
+        //이전단어의 뜻과 사진 등등등이 나옴 !
+        wbShowWord()
+    })
+    wB_rightBtn.addEventListener('click',function(){
+        whatNumber = whatNumber+1
+        wbShowWord()
+    })
+
+    function wbShowWord(){
+        let wb_changeImg = document.querySelector('.wb_wordImg')
+        let wb_change_word_En = document.querySelector('.wb_changeWord')
+        let wb_change_word_Pron = document.querySelector('.wb_changePron')
+        let wb_change_word_Kr1 = document.querySelector('.wb_change1Kr')
+        let wb_change_word_Kr1Sen = document.querySelector('.wb_change1Sen')
+        let wb_change_word_Kr1SenKr = document.querySelector('.wb_change1SenKr')
+        let wb_change_word_Kr2 = document.querySelector('.wb_change2Kr')
+        let wb_change_word_Kr2Sen = document.querySelector('.wb_change2Sen')
+        let wb_change_word_Kr2SenKr = document.querySelector('.wb_change2SenKr')
+        let wb_change_word_Kr3 = document.querySelector('.wb_change3Kr')
+        let wb_change_word_Kr3Sen = document.querySelector('.wb_change3Sen')
+        let wb_change_word_Kr3SenKr = document.querySelector('.wb_change3SenKr')
+        console.log(whatNumber)
+        console.log([...addWordArr][whatNumber])
+
+        wb_change_word_En.innerHTML = [...addWordArr][whatNumber]
     }
-    wB_DirectionImgChange()
+
+    //다음단어나 이전단어를 보여줌 
+    //해당 단어를 눌렀을때 배열 item이랑 p의 innerHtml이랑 같으면 word번호 출력
+    //
 }
 AtWordBook()

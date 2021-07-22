@@ -246,7 +246,7 @@
                 <input type="text" class= "inputValue" maxlength = '1'>
             </div>
             <div class="game_next">
-                <p>다음문제</p>
+                <p class="game_next_text">게임시작</p>
                 <img src="img/rightbtn.png" alt="gamenext" class="game_right_Btn">
             </div>
         </section>
@@ -308,75 +308,13 @@
                     <p>즐겨찾기</p>
                 </div>
             </div>
-            <ul class="wrongWord_words_view">
-                <div class="wrongWord_words">
-                    <li>
-                        <p>collect</p>
-                    </li>
-                </div>
-            </ul>
-            <ul class="addWord_words_view">
-                <div class="addWord_words">
-                </div>
-            </ul>
-            <div class="TryQuiz">
-                <p>문제 풀기</p>
-            </div>
-            <div class="alert">
-                <div class="closeBtn"><img src="img/closeButton.png" alt="closeButton"></div>
-                <p>단어가 4개 이상 일 때만 문제 풀기가 가능합니다!</p>
-            </div>
-            <div class="wordBookQuiz">
-                <div class="wordBookQuiz_closeBtn">
-                    <img src="img/closeButton.png" alt="closeButton">
-                </div>
-                <div class="wB_question">
-                    <h1 class="wB_question_word">explore</h1>
-                </div>
-                <ul class="wordBook_number">
-                    <li class="wB_number1">
-                        <p class="wB_number">①
-                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
-                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
-                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
-                        </p>
-                        <p class="wB_number1_text wB_number_text">탐험하다.</p>
-                    </li>
-                    <li class="wB_number2">
-                        <p class="wB_number">②
-                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
-                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
-                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
-                        </p>
-                        <p class="wB_number2_text wB_number_text">농구하다.</p>
-                    </li>
-                    <li class="wB_number3">
-                        <p class="wB_number">③
-                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
-                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
-                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
-                        </p>
-                        <p class="wB_number3_text wB_number_text">숙제하다.</p>
-                    </li>
-                    <li class="wB_number4">
-                        <p class="wB_number">④
-                            <span class="wB_quest_correct"><img src="img/correct.png" alt="correct"></span>
-                            <span class="wB_quest_wrong"><img src="img/wrong.png" alt="wrong"></span>
-                            <span class="wB_quest_check"><img src="img/check.png" alt="check"></span>
-                        </p>
-                        <p class="wB_number4_text wB_number_text">먹다.</p>
-                    </li>
+            <div class="wrongWord_words_view">
+                <ul class="wrongWord_words">
                 </ul>
-                <div class="wB_direction">
-                    <div class="wB_prev">
-                        <img src="img/leftbtn.png" alt="quizprev" class="wB_prev_Img">
-                        <p>이전문제</p>
-                    </div>
-                    <div class="wB_next">
-                        <p>다음문제</p>
-                        <img src="img/rightbtn.png" alt="quiznext" class="wB_next_Img">
-                    </div>
-                </div>
+            </div>
+            <div class="addWord_words_view">
+                <ul class="addWord_words">
+                </ul>
             </div>
             <div class="wB_revise">
                 <div class="wordBookrevise_closeBtn">
@@ -387,41 +325,29 @@
                     <img src="img/rightbtn.png" alt="right" class="wB_rightBtn">
                 </div>
                 <div class="wB_wordImg">
-                    <img src="img/wordImg/explore.jpg" alt="exploreImg">
+                    <img src="" alt="exploreImg" class="wb_wordImg">
                 </div>
                 <div class="wB_word_En">
-                    <h1>explore</h1>
-                    <p>[ ikˈsplôr ]</p>
+                    <h1 class="wb_changeWord">explore</h1>
+                    <p class="wb_changePron">[ ikˈsplôr ]</p>
                 </div>
                 <div class="wB_meaning_Kr">
                     <div class="wB_first_meaning_Kr">
-                        <h2>1. 답사[탐사/탐험]하다</h2>
-                        <p class="wB_sentence">The city is best explored on foot.
-                            <span class="wB_sentence_meaning">그 도시는 걸어서 답사하는 것이 가장 좋다.</span>
+                        <h2>1. <span class="wb_change1Kr">답사[탐사/탐험]하다</span></h2>
+                        <p class="wB_sentence wb_change1Sen">The city is best explored on foot.
+                            <span class="wB_sentence_meaning wb_change1SenKr">그 도시는 걸어서 답사하는 것이 가장 좋다.</span>
                         </p>
                     </div>
                     <div class="wB_second_meaning_Kr">
-                        <h2>2. 탐구[분석]하다</h2>
-                        <p class="wB_sentence">These ideas will be explored in more detail in chapter 7.
-                            <span class="wB_sentence_meaning">이런 생각들은 7장에서 더 자세히 탐구될 것이다.</span>
+                        <h2>2. <span class="wb_change2Kr">탐구[분석]하다</span></h2>
+                        <p class="wB_sentence wb_change2Sen">These ideas will be explored in more detail in chapter 7.
+                            <span class="wB_sentence_meaning wb_change2SenKr">이런 생각들은 7장에서 더 자세히 탐구될 것이다.</span>
                         </p>
                     </div>
                     <div class="wB_third_meaning_Kr">
-                        <h2>3. (손이나 발 등으로) 더듬어 보다[살피다]</h2>
-                        <p class="wB_sentence">She explored the sand with her toes.
-                            <span class="wB_sentence_meaning">그녀는 발가락을 모래에 대 보았다.</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="wB_kr_en">
-                    <div class="wB_kr_btn">
-                        <p>가
-                            <span class="wB_hide1"><img src="img/hide.png" alt="hide"></span>
-                        </p>
-                    </div>
-                    <div class="wB_En_btn">
-                        <p>En
-                            <span class="wB_hide2"><img src="img/hide.png" alt="hide"></span>
+                        <h2>3. <span class="wb_change3Kr">(손이나 발 등으로) 더듬어 보다[살피다]</span></h2>
+                        <p class="wB_sentence wb_change3Sen">She explored the sand with her toes.
+                            <span class="wB_sentence_meaning wb_change3SenKr">그녀는 발가락을 모래에 대 보았다.</span>
                         </p>
                     </div>
                 </div>
