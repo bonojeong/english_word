@@ -47,8 +47,13 @@ let addWord_words_text = document.querySelectorAll('.addWord_text'); //영단어
 let addWord_words_view = document.querySelector('.addWord_words_view'); // 영단어장 즐겨찾기
 let wB_revise = document.querySelector('.wB_revise');
 let kind_of_wordBook = document.querySelector('.kind_of_wordBook');
-//생성 p, 생성 li, 생성한단어의 순번, 생성한 단어의 첫번째 알파벳
-let addP, addLi, whatNumber, whatAlphabets
+let wB_leftBtn = document.querySelector('.wB_leftBtn')
+let wB_rightBtn = document.querySelector('.wB_rightBtn')
+//1.생성 p 2.생성 li  3.생성한단어의 순번 4.생성한 단어의 첫번째 알파벳
+//5.a to z에서 첫번째 알파벳의 순번 6.누른 단어가 배열의 몇번째에있는지  
+
+let addP, addLi, whatNumber, whatAlphabets, whatAlphabetsNum, whatWordNum, clickWord
+let alphabetsArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 let wrongP, wrongLi
 //nav 클릭에 따라 섹션 변화
 function navChange(){
@@ -143,19 +148,28 @@ function wbShowWord(){
     let wb_change_word_Kr3Sen = document.querySelector('.wb_change3Sen')
     let wb_change_word_Kr3SenKr = document.querySelector('.wb_change3SenKr')
     console.log(whatNumber) // 누른단어의 배열에서의 몇번째 순서
-    console.log(whatAlphabets) // 누른 단어의 첫번째 알파벳
     console.log([...addWordArr][whatNumber]) // 누른 영단어
+    console.log(whatAlphabets) // 누른 단어의 첫번째 알파벳
+    console.log(whatAlphabetsNum) // A to Z 에서 첫번째 알파벳의 순번
+    console.log(wordsArr[whatAlphabetsNum]) // 첫번째 알파벳으로 시작하는 배열
+    console.log(whatWordNum) // 누른단어가 배열에 몇번째에 있는지 !
+    clickWord = wordsArr[whatAlphabetsNum][whatWordNum]
 
     //텍스트 변화 !!!
+    
     wb_change_word_En.innerHTML = [...addWordArr][whatNumber]
-
+    wb_change_word_Pron.innerHTML = clickWord.word_En_pron
+    wb_change_word_Kr1.innerHTML = clickWord.meaning_Kr1
+    wb_change_word_Kr1Sen.innerHTML = clickWord.meaning_Kr1_sen
+    wb_change_word_Kr1SenKr.innerHTML = clickWord.meaning_Kr1_senMeaning
+    wb_change_word_Kr2.innerHTML = clickWord.meaning_Kr2
+    wb_change_word_Kr2Sen.innerHTML = clickWord.meaning_Kr2_sen
+    wb_change_word_Kr2SenKr.innerHTML = clickWord.meaning_Kr2_senMeaning
+    wb_change_word_Kr3.innerHTML = clickWord.meaning_Kr3
+    wb_change_word_Kr3Sen.innerHTML = clickWord.meaning_Kr3_sen
+    wb_change_word_Kr3SenKr.innerHTML = clickWord.meaning_Kr3_senMeaning
 }
-// let exam = a_word.forEach( (i,e,v) => {
-//     if( i.word_En == 'ask'){
-//         console.log(e)
-//         console.log(v)
-//     }
-// })
+
 //한번더 누르면 전체 단어 랜덤
 function AtWord(){
     let changeImg = document.querySelector('.wordImg')
@@ -332,9 +346,28 @@ function AtWord(){
                 wB_revise.style.display = 'flex'
                 //whatNumber에 누른단어의 순번이 몇번째인지 출력
                 whatNumber = [...addWordArr].indexOf(this.innerHTML);
+
+                //여기에 이벤트 줘보자 누르면 감소되는걸로 
+                //밑에서는 whatNumber을 변경 못해서 여기에 미리 준다.
+                wB_leftBtn.addEventListener('click',function(){
+                    whatNumber = whatNumber-1
+                })
+                wB_rightBtn.addEventListener('click',function(){
+                    whatNumber = whatNumber+1
+                })
                 for( let i=0; i<1; i++){
                     whatAlphabets = [...addWordArr][whatNumber][i]; // 누른 단어의 첫번째 알파벳 추출
-                } 
+                }
+                alphabetsArr.forEach( (i,e) => {
+                    if( whatAlphabets == i){
+                        whatAlphabetsNum = e; // 첫번째 알파벳의 순번(영어 알파벳에서의)
+                    }
+                })
+                wordsArr[whatAlphabetsNum].forEach( (i,e) => {
+                    if( i.word_En == [...addWordArr][whatNumber]){
+                        whatWordNum = e;
+                    }
+                })
                 wbShowWord()
             })
         }
@@ -628,8 +661,7 @@ function AtWordBook(){
     const addWord = document.querySelector('.addWord');
     const wrongWord_words_view = document.querySelector('.wrongWord_words_view');
     let wordBookrevise_closeBtn = document.querySelector('.wordBookrevise_closeBtn');
-    let wB_leftBtn = document.querySelector('.wB_leftBtn')
-    let wB_rightBtn = document.querySelector('.wB_rightBtn')
+    
     wrongWords.addEventListener('click',function(){
         wrongWords.style.background = '#707070';
         wrongWords.style.color = '#fff';
@@ -659,12 +691,10 @@ function AtWordBook(){
     wB_rightBtn.addEventListener('mouseup',rightMouseUpImgChange)
 
     wB_leftBtn.addEventListener('click',function(){
-        whatNumber = whatNumber-1
         //이전단어의 뜻과 사진 등등등이 나옴 !
         wbShowWord()
     })
     wB_rightBtn.addEventListener('click',function(){
-        whatNumber = whatNumber+1
         wbShowWord()
     })
 
