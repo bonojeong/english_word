@@ -45,6 +45,7 @@ let wrongWord_words_text = document.querySelectorAll('.wrong_word_text'); // 영
 let addWord_wordsList = document.querySelector('.addWord_words'); // 영단어장 즐겨찾기 ul
 let addWord_words_text = document.querySelectorAll('.addWord_text'); //영단어장 즐겨찾기 p
 let addWord_words_view = document.querySelector('.addWord_words_view'); // 영단어장 즐겨찾기
+let wrongWord_words_view = document.querySelector('.wrongWord_words_view');
 let wB_revise = document.querySelector('.wB_revise');
 let kind_of_wordBook = document.querySelector('.kind_of_wordBook');
 let wB_leftBtn = document.querySelector('.wB_leftBtn')
@@ -54,7 +55,8 @@ let wB_rightBtn = document.querySelector('.wB_rightBtn')
 
 let addP, addLi, whatNumber, whatAlphabets, whatAlphabetsNum, whatWordNum, clickWord
 let alphabetsArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-let wrongP, wrongLi
+
+let wrongP, wrongLi,whatListOfWord //오답단어 생성 p , 오답단어 생성 li, 각 리스트의 data-set값
 //nav 클릭에 따라 섹션 변화
 function navChange(){
     const nav = document.querySelectorAll('.nav > div');
@@ -120,6 +122,26 @@ function shuffle(array) {
     return array
 }
 
+//다음단어나 이전단어를 보여줌 
+//해당 단어를 눌렀을때 배열 item이랑 p의 innerHtml이랑 같으면 word번호 출력
+function checkWord(maybe){
+    console.log(whatNumber)
+    for( let i=0; i<1; i++){
+        whatAlphabets = [...maybe][whatNumber][i]; // 누른 단어의 첫번째 알파벳 추출
+    }
+    console.log([...maybe][whatNumber][0])
+    alphabetsArr.forEach( (i,e) => {
+        if( whatAlphabets == i){
+            whatAlphabetsNum = e; // 첫번째 알파벳의 순번(영어 알파벳에서의)
+        }
+    })
+    wordsArr[whatAlphabetsNum].forEach( (i,e) => {
+        if( i.word_En == [...maybe][whatNumber]){
+            whatWordNum = e;
+        }
+    })
+}
+
 // 버튼 클릭시 이미지 변경
 function leftMouseDownImgChange(){
     this.src = "img/prevclicktheBtn.png";
@@ -134,7 +156,7 @@ function rightMouseUpImgChange(){
     this.src = "img/rightbtn.png";
 }
 
-function wbShowWord(){
+function wbShowWord(who){
     let wb_changeImg = document.querySelector('.wb_wordImg')
     let wb_change_word_En = document.querySelector('.wb_changeWord')
     let wb_change_word_Pron = document.querySelector('.wb_changePron')
@@ -147,17 +169,17 @@ function wbShowWord(){
     let wb_change_word_Kr3 = document.querySelector('.wb_change3Kr')
     let wb_change_word_Kr3Sen = document.querySelector('.wb_change3Sen')
     let wb_change_word_Kr3SenKr = document.querySelector('.wb_change3SenKr')
-    console.log(whatNumber) // 누른단어의 배열에서의 몇번째 순서
-    console.log([...addWordArr][whatNumber]) // 누른 영단어
-    console.log(whatAlphabets) // 누른 단어의 첫번째 알파벳
-    console.log(whatAlphabetsNum) // A to Z 에서 첫번째 알파벳의 순번
-    console.log(wordsArr[whatAlphabetsNum]) // 첫번째 알파벳으로 시작하는 배열
-    console.log(whatWordNum) // 누른단어가 배열에 몇번째에 있는지 !
+    // console.log(whatNumber) // 누른단어의 배열에서의 몇번째 순서
+    // console.log([...addWordArr][whatNumber]) // 누른 영단어
+    // console.log(whatAlphabets) // 누른 단어의 첫번째 알파벳
+    // console.log(whatAlphabetsNum) // A to Z 에서 첫번째 알파벳의 순번
+    // console.log(wordsArr[whatAlphabetsNum]) // 첫번째 알파벳으로 시작하는 배열
+    // console.log(whatWordNum) // 누른단어가 배열에 몇번째에 있는지 !
     clickWord = wordsArr[whatAlphabetsNum][whatWordNum]
 
     //텍스트 변화 !!!
-    
-    wb_change_word_En.innerHTML = [...addWordArr][whatNumber]
+    wb_changeImg.src = clickWord.wordImg
+    wb_change_word_En.innerHTML = [...who][whatNumber]
     wb_change_word_Pron.innerHTML = clickWord.word_En_pron
     wb_change_word_Kr1.innerHTML = clickWord.meaning_Kr1
     wb_change_word_Kr1Sen.innerHTML = clickWord.meaning_Kr1_sen
@@ -170,7 +192,6 @@ function wbShowWord(){
     wb_change_word_Kr3SenKr.innerHTML = clickWord.meaning_Kr3_senMeaning
 }
 
-//한번더 누르면 전체 단어 랜덤
 function AtWord(){
     let changeImg = document.querySelector('.wordImg')
     let change_word_En = document.querySelector('.changeWord')
@@ -262,34 +283,29 @@ function AtWord(){
         function nextAlphabetChange(){
             var currentAlphabetArr = wordsArr[currentAlphabet]
             if( currentWord < currentAlphabetArr.length - 1){
-                leftBtn.removeAttribute('disable')
                 currentWord = currentWord + 1;
                 rightBtn.style.opacity = '1';
                 leftBtn.style.opacity = '1';
                 wordTextChange()
             }
             if(currentWord == currentAlphabetArr.length - 1){
-                rightBtn.setAttribute('disable','true')
                 rightBtn.style.opacity = '0.3'
             }
             console.log(currentWord)
         }
         function prevAlphabetChange(){
             if(currentWord > 0 ){
-                rightBtn.removeAttribute('disable')
                 currentWord = currentWord -1;
                 leftBtn.style.opacity = '1';
                 rightBtn.style.opacity = '1';
                 wordTextChange()
             }
             if(currentWord == 0 ){
-                leftBtn.setAttribute('disabled','true')
                 leftBtn.style.opacity = '0.3'
             }
             console.log(currentWord)
         }
         function init(){
-            leftBtn.setAttribute('disabled','true')
             leftBtn.addEventListener('click',prevAlphabetChange)
             rightBtn.addEventListener('click',nextAlphabetChange)
             leftBtn.style.opacity = '0.2'
@@ -335,11 +351,13 @@ function AtWord(){
             addP.append(change_word_En.innerHTML);
             addWord_wordsList.append(addLi);
             addLi.append(addP)
+            addP.setAttribute('data-num','1')
 
             //새로만든 리스트에 이벤트 추가 추가해서 
             // 눌렀을때 설명보여줌
             //보여주고 리스트 순서대로 
             addP.addEventListener('click',function(){
+                whatListOfWord = addP.getAttribute('data-num')
                 header.style.display = "none"
                 kind_of_wordBook.style.display = 'none'
                 addWord_words_view.style.display = 'none';
@@ -347,28 +365,32 @@ function AtWord(){
                 //whatNumber에 누른단어의 순번이 몇번째인지 출력
                 whatNumber = [...addWordArr].indexOf(this.innerHTML);
 
-                //여기에 이벤트 줘보자 누르면 감소되는걸로 
-                //밑에서는 whatNumber을 변경 못해서 여기에 미리 준다.
-                wB_leftBtn.addEventListener('click',function(){
-                    whatNumber = whatNumber-1
-                })
-                wB_rightBtn.addEventListener('click',function(){
-                    whatNumber = whatNumber+1
-                })
-                for( let i=0; i<1; i++){
-                    whatAlphabets = [...addWordArr][whatNumber][i]; // 누른 단어의 첫번째 알파벳 추출
+                //눌렀으면  첫단어면 왼쪽 방향 버튼 삭제
+                if(whatNumber == 0){
+                    wB_leftBtn.style.display = 'none'
                 }
+                //눌렀을때 마지막단어면 오른쪽 방향 버튼 삭제
+                if( whatNumber == [...addWordArr].length -1 ){
+                    wB_rightBtn.style.display = 'none'
+                }
+
+                // 누른 단어의 첫번째 알파벳 추출
+                for( let i=0; i<1; i++){
+                    whatAlphabets = [...addWordArr][whatNumber][i]; 
+                }
+                // 첫번째 알파벳의 순번(영어 알파벳에서의)
                 alphabetsArr.forEach( (i,e) => {
                     if( whatAlphabets == i){
-                        whatAlphabetsNum = e; // 첫번째 알파벳의 순번(영어 알파벳에서의)
+                        whatAlphabetsNum = e; 
                     }
                 })
+                // 보이는 영단어가 배열에서 몇번째인지 !
                 wordsArr[whatAlphabetsNum].forEach( (i,e) => {
                     if( i.word_En == [...addWordArr][whatNumber]){
-                        whatWordNum = e;
+                        whatWordNum = e; 
                     }
                 })
-                wbShowWord()
+                wbShowWord(addWordArr)
             })
         }
         //배열에 단어추가하기 !
@@ -577,15 +599,55 @@ function AtQuiz(){
     function addWrongWord(){
         //문제의 영단어가 배열에 없을 때만 영단어장에 추가 ! 
         if([...wrongWordsList].includes(question_word.innerHTML) == false){
-            const li = document.createElement('li'); // li생성
-            const p = document.createElement('p'); // p생성
-            p.classList.add('wrong_word_text')
-            p.append(question_word.innerHTML); // p에 보기 문제 생성
-            wrongWord_words.append(li); //
-            li.append(p)
+            wrongLi = document.createElement('li'); // li생성
+            wrongP = document.createElement('p'); // p생성
+            wrongP.classList.add('wrong_word_text')
+            wrongP.append(question_word.innerHTML); // p에 보기 문제 생성
+            wrongWord_words.append(wrongLi); //
+            wrongLi.append(wrongP)
+            wrongP.setAttribute('data-num','2')
+
+            //만들어낸 p에 클릭이벤트추가!
+            wrongP.addEventListener('click',function(){
+                whatListOfWord = wrongP.getAttribute('data-num')
+                header.style.display = "none"
+                kind_of_wordBook.style.display = 'none'
+                wrongWord_words_view.style.display = 'none'
+                addWord_words_view.style.display = 'none';
+                wB_revise.style.display = 'flex'
+                //whatNumber에 누른단어의 순번이 몇번째인지 출력
+                whatNumber = [...wrongWordsList].indexOf(this.innerHTML);
+
+                //눌렀으면  첫단어면 왼쪽 방향 버튼 삭제
+                if(whatNumber == 0){
+                    wB_leftBtn.style.display = 'none'
+                }
+                //눌렀을때 마지막단어면 오른쪽 방향 버튼 삭제
+                if( whatNumber == [...wrongWordsList].length -1 ){
+                    wB_rightBtn.style.display = 'none'
+                }
+
+                // 누른 단어의 첫번째 알파벳 추출
+                for( let i=0; i<1; i++){
+                    whatAlphabets = [...wrongWordsList][whatNumber][i]; 
+                }
+                // 첫번째 알파벳의 순번(영어 알파벳에서의)
+                alphabetsArr.forEach( (i,e) => {
+                    if( whatAlphabets == i){
+                        whatAlphabetsNum = e; 
+                    }
+                })
+                // 보이는 영단어가 배열에서 몇번째인지 !
+                wordsArr[whatAlphabetsNum].forEach( (i,e) => {
+                    if( i.word_En == [...wrongWordsList][whatNumber]){
+                        whatWordNum = e; 
+                    }
+                })
+                wbShowWord(wrongWordsList)
+            })
         }
-        wrongWordsList.add(question_word.innerHTML) // set객체에 문제영단어 추가
-        console.log(wrongWordsList)
+        // set객체에 문제영단어 추가
+        wrongWordsList.add(question_word.innerHTML) 
     }
 
     //전체랜덤
@@ -659,9 +721,9 @@ AtQuiz()
 function AtWordBook(){
     const wrongWords = document.querySelector('.wrongWords');
     const addWord = document.querySelector('.addWord');
-    const wrongWord_words_view = document.querySelector('.wrongWord_words_view');
     let wordBookrevise_closeBtn = document.querySelector('.wordBookrevise_closeBtn');
     
+    //틀린단어 버튼 스타일변경
     wrongWords.addEventListener('click',function(){
         wrongWords.style.background = '#707070';
         wrongWords.style.color = '#fff';
@@ -669,8 +731,8 @@ function AtWordBook(){
         addWord.style.color = '#707070';
         wrongWord_words_view.style.display = 'unset';
         addWord_words_view.style.display = 'none';
-        console.log([...wrongWordsList])
     })
+    //즐겨찾기단어 스타일 변경
     addWord.addEventListener('click',function(){
         wrongWords.style.background = '#fff';
         wrongWords.style.color = '#707070';
@@ -679,11 +741,22 @@ function AtWordBook(){
         wrongWord_words_view.style.display = 'none';
         addWord_words_view.style.display = 'unset';
     })
+    //단어장 닫기 버튼
     wordBookrevise_closeBtn.addEventListener('click',function(){
         header.style.display = "unset"
         kind_of_wordBook.style.display = 'flex'
         addWord_words_view.style.display = 'block';
         wB_revise.style.display = 'none'
+        wrongWords.style.background = '#707070';
+        wrongWords.style.color = '#fff';
+        addWord.style.background = '#fff';
+        addWord.style.color = '#707070';
+        wrongWord_words_view.style.display = 'unset';
+        addWord_words_view.style.display = 'none';
+        //닫기 누르면 방향버튼 전부다 on
+        wB_leftBtn.style.display = 'unset'
+        wB_rightBtn.style.display = 'unset'
+
     })
     wB_leftBtn.addEventListener('mousedown',leftMouseDownImgChange)
     wB_leftBtn.addEventListener('mouseup',leftMouseUpImgChange)
@@ -691,16 +764,54 @@ function AtWordBook(){
     wB_rightBtn.addEventListener('mouseup',rightMouseUpImgChange)
 
     wB_leftBtn.addEventListener('click',function(){
+        whatNumber = whatNumber - 1
+        if(whatListOfWord == 1){
+            if( whatNumber < [...addWordArr].length -1 ){
+                wB_rightBtn.style.display = 'unset'
+            }
+            if( whatNumber == 0 ){
+                wB_leftBtn.style.display = 'none'
+            }
+            checkWord(addWordArr)
+            wbShowWord(addWordArr)
+        }
         //이전단어의 뜻과 사진 등등등이 나옴 !
-        wbShowWord()
+        if(whatListOfWord == 2){
+            if( whatNumber < [...wrongWordsList].length -1 ){
+                wB_rightBtn.style.display = 'unset'
+            }
+            if( whatNumber == 0 ){
+                wB_leftBtn.style.display = 'none'
+            }
+            checkWord(wrongWordsList)
+            wbShowWord(wrongWordsList)
+        }
+        
     })
     wB_rightBtn.addEventListener('click',function(){
-        wbShowWord()
+        whatNumber = whatNumber + 1
+        if(whatListOfWord == 1){
+            if( whatNumber == [...addWordArr].length -1 ){
+                wB_rightBtn.style.display = 'none'
+            }
+            if( whatNumber > 0 ){
+                wB_leftBtn.style.display = 'unset'
+            }
+            checkWord(addWordArr)
+            wbShowWord(addWordArr)
+        }
+        if(whatListOfWord == 2){
+            if( whatNumber == [...wrongWordsList].length -1 ){
+                wB_rightBtn.style.display = 'none'
+            }
+            if( whatNumber > 0 ){
+                wB_leftBtn.style.display = 'unset'
+            }
+            checkWord(wrongWordsList)
+            wbShowWord(wrongWordsList)
+        }
     })
 
-    //다음단어나 이전단어를 보여줌 
-    //해당 단어를 눌렀을때 배열 item이랑 p의 innerHtml이랑 같으면 word번호 출력
-    //
 }
 AtWordBook()
 
