@@ -104,17 +104,6 @@ body main .englishWord .direction .rightBtn {
   right: 1%;
 }
 
-body main .englishWord .wordImg {
-  width: 150px;
-  height: 200px;
-  margin-bottom: 50px;
-}
-
-body main .englishWord .wordImg img {
-  border-radius: 10px;
-  width: 100%;
-}
-
 body main .englishWord .word_En {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -707,17 +696,6 @@ body main .wordBook .wB_revise .wB_direction .wB_rightBtn {
   right: 1%;
 }
 
-body main .wordBook .wB_revise .wB_wordImg {
-  width: 150px;
-  height: 200px;
-  margin-bottom: 50px;
-}
-
-body main .wordBook .wB_revise .wB_wordImg img {
-  border-radius: 10px;
-  width: 100%;
-}
-
 body main .wordBook .wB_revise .wB_word_En {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,4 +781,3 @@ body main .wordBook .wB_revise .wB_kr_en .wB_En_btn p span {
   -webkit-transform: translate(-50%, -40%);
           transform: translate(-50%, -40%);
 }
-/*# sourceMappingURL=style.css.map */

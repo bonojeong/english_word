@@ -1,7 +1,6 @@
 words = {
     "a_word":[
         {
-            "wordImg":"",
             "word_En":"advance",
             "word_En_pron":"[əd│væns]",
             "meaning_Kr1":"(특히 군대의) 전진, 진군",
@@ -18,7 +17,6 @@ words = {
             "meaning_Kr3_senMeaning":"그들은 계약 후 선금으로 5천 파운드를 제시했다."
         },
         {
-            "wordImg":"",
             "word_En":"ask",
             "word_En_pron":"[ æsk ]",
             "meaning_Kr1":"묻다, 물어 보다",
@@ -32,7 +30,6 @@ words = {
             "meaning_Kr3_senMeaning":"일자리/술 한 잔/설명을 부탁하다"
         },
         {
-            "wordImg":"",
             "word_En":"adopt",
             "word_En_pron":"[ əˈdɑːpt ]",
             "meaning_Kr1":"입양하다",
@@ -46,7 +43,6 @@ words = {
             "meaning_Kr3_senMeaning":"결의안을 채택하다"
         },
         {
-            "wordImg":"",
             "word_En":"allow",
             "word_En_pron":" [ əˈlaʊ ] ",
             "meaning_Kr1":"(무엇을 하도록) 허락하다; 용납하다",
@@ -60,7 +56,6 @@ words = {
             "meaning_Kr3_senMeaning":"개 출입 금지."
         },
         {
-            "wordImg":"",
             "word_En":"apply",
             "word_En_pron":"[ əˈplaɪ ]",
             "meaning_Kr1":"신청하다; 지원하다",
@@ -74,7 +69,6 @@ words = {
             "meaning_Kr3_senMeaning":"크림을 얼굴과 목에 조금씩 바르세요."
         },
         {
-            "wordImg":"",
             "word_En":"appeal",
             "word_En_pron":"[ əˈpiːl ]",
             "meaning_Kr1":"항소(抗訴), 상고(上告)",
@@ -88,7 +82,6 @@ words = {
             "meaning_Kr3_senMeaning":"TV를 통해 그 자선 모금에 기부해 달라는 호소를 시작하다"
         },
         {
-            "wordImg":"",
             "word_En":"appear",
             "word_En_pron":"[ əˈpɪr ]",
             "meaning_Kr1":"…인 것 같다",
@@ -102,7 +95,6 @@ words = {
             "meaning_Kr3_senMeaning":"언제 지구상에 포유류가 생겼을까?"
         },
         {
-            "wordImg":"",
             "word_En":"accept",
             "word_En_pron":"[ əkˈsept ]",
             "meaning_Kr1":"(기꺼이) 받아들이다",
@@ -116,7 +108,6 @@ words = {
             "meaning_Kr3_senMeaning":"내 글은 출판을 수락받았다."
         },
         {
-            "wordImg":"",
             "word_En":"account",
             "word_En_pron":"[ əˈkaʊnt ]",
             "meaning_Kr1":"계좌",
@@ -130,7 +121,6 @@ words = {
             "meaning_Kr3_senMeaning":"그거 내 거래 장부에 달아 둬요."
         },
         {
-            "wordImg":"",
             "word_En":"against",
             "word_En_pron":"[ əˈɡenst; əˈɡeɪnst ]",
             "meaning_Kr1":"…에 반대하여[맞서]",
@@ -146,7 +136,6 @@ words = {
     ],
     "b_word":[
         {
-            "wordImg":"",
             "word_En":"break",
             "word_En_pron":" [ breɪk ]",
             "meaning_Kr1":"깨어지다, 부서지다; 깨다, 부수다",
@@ -160,7 +149,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 개가 나를 물었지만 피부가 찢어지지는 않았다."
         },
         {
-            "wordImg":"",
             "word_En":"bear",
             "word_En_pron":" [ ber ]",
             "meaning_Kr1":"참다, 견디다",
@@ -174,7 +162,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀가 그 변경 작업 대부분에 대한 책임을 떠맡았다."
         },
         {
-            "wordImg":"",
             "word_En":"beat",
             "word_En_pron":" [ biːt ]",
             "meaning_Kr1":"(게임시합에서) 이기다",
@@ -188,7 +175,6 @@ words = {
             "meaning_Kr3_senMeaning":"전문가들도 손들게 만든 문제"
         },
         {
-            "wordImg":"",
             "word_En":"bring",
             "word_En_pron":"[ brɪŋ ] ",
             "meaning_Kr1":"가져오다, 데려오다",
@@ -202,7 +188,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 혁명은 수많은 변화를 가져왔다."
         },
         {
-            "wordImg":"",
             "word_En":"bother",
             "word_En_pron":"[ |bɑːðə(r) ]",
             "meaning_Kr1":"신경 쓰다, 애를 쓰다",
@@ -216,7 +201,6 @@ words = {
             "meaning_Kr3_senMeaning":"내가 일할 때는 말 좀 시키지 마."
         },
         {
-            "wordImg":"",
             "word_En":"benefit",
             "word_En_pron":"[ ˈbenɪfɪt ]",
             "meaning_Kr1":"혜택, 이득",
@@ -230,7 +214,6 @@ words = {
             "meaning_Kr3_senMeaning":"자선 경기/음악회"
         },
         {
-            "wordImg":"",
             "word_En":"bless",
             "word_En_pron":"[ bles ]",
             "meaning_Kr1":"(신의) 가호[축복]를 빌다",
@@ -244,7 +227,6 @@ words = {
             "meaning_Kr3_senMeaning":"오 주님, 성스러운 주님의 이름으로 기도드리옵니다."
         },
         {
-            "wordImg":"",
             "word_En":"board",
             "word_En_pron":"[ bɔːrd ]",
             "meaning_Kr1":"판자, 널",
@@ -258,7 +240,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 배에는 세관 직원들이 승선해 있었다."
         },
         {
-            "wordImg":"",
             "word_En":"become",
             "word_En_pron":"[ bɪˈkʌm ]",
             "meaning_Kr1":"…(해)지다, …이 되다",
@@ -272,7 +253,6 @@ words = {
             "meaning_Kr3_senMeaning":"짧은 머리가 네게 정말 잘 어울려."
         },
         {
-            "wordImg":"",
             "word_En":"branch",
             "word_En_pron":"[ bræntʃ ]",
             "meaning_Kr1":"(큰 조직의) 분과[부서]",
@@ -288,7 +268,6 @@ words = {
     ],
     "c_word":[
         {
-            "wordImg":"",
             "word_En":"charge",
             "word_En_pron":"[ tʃɑːrdʒ ] ",
             "meaning_Kr1":"(상품서비스에 대한) 요금",
@@ -302,7 +281,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 그 이야기가 사실이 아니라는 비난을 받아들이지 않았다."
         },
         {
-            "wordImg":"",
             "word_En":"condition",
             "word_En_pron":"[ kənˈdɪʃn ]",
             "meaning_Kr1":"상태",
@@ -316,7 +294,6 @@ words = {
             "meaning_Kr3_senMeaning":"의료상의 문제"
         },
         {
-            "wordImg":"",
             "word_En":"claim",
             "word_En_pron":"[ kleɪm ]",
             "meaning_Kr1":"(…이 사실이라고) 주장하다.",
@@ -330,7 +307,6 @@ words = {
             "meaning_Kr3_senMeaning":"그는 실업 수당을 신청할 자격이 안 된다."
         },
         {
-            "wordImg":"",
             "word_En":"commit",
             "word_En_pron":"[ kəˈmɪt ]",
             "meaning_Kr1":"(그릇된 일·범죄를) 저지르다",
@@ -344,7 +320,6 @@ words = {
             "meaning_Kr3_senMeaning":"대통령이 보건 정책 개혁을 약속하고 있다."
         },
         {
-            "wordImg":"",
             "word_En":"certain",
             "word_En_pron":"[ ˈsɜːrtn ]",
             "meaning_Kr1":"확실한, 틀림없는",
@@ -358,7 +333,6 @@ words = {
             "meaning_Kr3_senMeaning":"무슨 개인적인 이유가 있어서 제가 참석할 수 없을 거예요."
         },
         {
-            "wordImg":"",
             "word_En":"concern",
             "word_En_pron":"[ kən|sɜːrn ]",
             "meaning_Kr1":"(사람에게) 영향을 미치다",
@@ -372,7 +346,6 @@ words = {
             "meaning_Kr3_senMeaning":"내가 우려하는 것은 그 변화에 대한 우리의 준비 부족이다."
         },
         {
-            "wordImg":"",
             "word_En":"capacity",
             "word_En_pron":"[ kəˈpæsəti ]",
             "meaning_Kr1":"용량; 수용력",
@@ -386,7 +359,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀가 매니저로서 자신의 역할을 하는"
         },
         {
-            "wordImg":"",
             "word_En":"commitment",
             "word_En_pron":"[ kəˈmɪtmənt ]",
             "meaning_Kr1":"약속; 전념",
@@ -400,7 +372,6 @@ words = {
             "meaning_Kr3_senMeaning":"다음달에는 그가 영화 촬영 약속들로 바쁩니다."
         },
         {
-            "wordImg":"",
             "word_En":"collapse",
             "word_En_pron":"[ kəˈlæps ]",
             "meaning_Kr1":"붕괴되다, 무너지다",
@@ -414,7 +385,6 @@ words = {
             "meaning_Kr3_senMeaning":"노사간의 대화가 완전히 결렬되었다."
         },
         {
-            "wordImg":"",
             "word_En":"certificate",
             "word_En_pron":"",
             "meaning_Kr1":"증서, 증명서",
@@ -430,7 +400,6 @@ words = {
     ],
     "d_word":[
         {
-            "wordImg":"",
             "word_En":"deposit",
             "word_En_pron":"[ dɪ|pɑːzɪt ]",
             "meaning_Kr1":"(지불할 돈의 일부로 처음에 내는) 착수금",
@@ -444,7 +413,6 @@ words = {
             "meaning_Kr3_senMeaning":"예금은 어느 지점에서나 할 수 있다."
         },
         {
-            "wordImg":"",
             "word_En":"direct",
             "word_En_pron":"[ də|rekt; dɪ|rekt; daɪ|rekt ]",
             "meaning_Kr1":"(중간에 제삼자나 매개물 없이) 직접적인",
@@ -458,7 +426,6 @@ words = {
             "meaning_Kr3_senMeaning":"썬크림을 발라서 당신의 아이를 직사광선으로부터 보호하라."
         },
         {
-            "wordImg":"",
             "word_En":"due",
             "word_En_pron":"[ duː ]",
             "meaning_Kr1":"~로 인한; ~ 때문에",
@@ -472,7 +439,6 @@ words = {
             "meaning_Kr3_senMeaning":"그는 많은 보상을 받았다. 그러나 그가 마땅히 받아야 할 것 이상은 아니었다."
         },
         {
-            "wordImg":"",
             "word_En":"degree",
             "word_En_pron":"[ dɪˈɡriː ]",
             "meaning_Kr1":"(각도의 단위인) 도",
@@ -486,7 +452,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀가 하는 일은 고도의 기술을 요한다."
         },
         {
-            "wordImg":"",
             "word_En":"develop",
             "word_En_pron":"[ dɪˈveləp ]",
             "meaning_Kr1":"성장하다",
@@ -500,7 +465,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀의 아들은 두 살 때 천식이 생겼다."
         },
         {
-            "wordImg":"",
             "word_En":"discipline",
             "word_En_pron":"[ ˈdɪsəplɪn ]",
             "meaning_Kr1":"규율, 훈육",
@@ -514,7 +478,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 경찰관들은 인종 차별적인 발언으로 징계를 받았다."
         },
         {
-            "wordImg":"",
             "word_En":"decline",
             "word_En_pron":"[ dɪˈklaɪn ]",
             "meaning_Kr1":"(수가치품질 등의 지속적인) 감소",
@@ -528,7 +491,6 @@ words = {
             "meaning_Kr3_senMeaning":"내가 그들에게 태워 주겠다고 했지만 그들이 사양했다."
         },
         {
-            "wordImg":"",
             "word_En":"determine",
             "word_En_pron":"[ dɪ|tɜːrmɪn ]",
             "meaning_Kr1":"알아내다, 밝히다",
@@ -542,7 +504,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 회의의 개최 날짜는 아직 확정이 되지 않았다."
         },
         {
-            "wordImg":"",
             "word_En":"desperate",
             "word_En_pron":" [ˈdespərət ]",
             "meaning_Kr1":"자포자기한, 발악하는, 될 대로 되라는 식의",
@@ -556,7 +517,6 @@ words = {
             "meaning_Kr3_senMeaning":"그는 일자리가 너무도 절실히 필요해서 무슨 일이라도 했을 것이다."
         },
         {
-            "wordImg":"",
             "word_En":"demonstrate",
             "word_En_pron":"[ ˈdemənstreɪt ]",
             "meaning_Kr1":"증거를 들어가며 보여주다, 입증하다",
@@ -572,7 +532,6 @@ words = {
     ],
     "e_word":[
         {
-            "wordImg":"",
             "word_En":"express",
             "word_En_pron":"[ ɪkˈspres ]",
             "meaning_Kr1":"	(감정의견 등을) 나타내다, 표(현)하다",
@@ -586,7 +545,6 @@ words = {
             "meaning_Kr3_senMeaning":"그들의 기쁨은 터져 나오는 박수소리로 나타났다."
         },
         {
-            "wordImg":"",
             "word_En":"even",
             "word_En_pron":" [ ˈiːvn ]",
             "meaning_Kr1":"	(예상 밖이나 놀라운 일을 나타내어) …도[조차]",
@@ -600,7 +558,6 @@ words = {
             "meaning_Kr3_senMeaning":"작업을 하려면 윗면이 반반한 곳이 필요하다."
         },
         {
-            "wordImg":"",
             "word_En":"extend",
             "word_En_pron":"[ ɪkˈstend ] ",
             "meaning_Kr1":"더 길게[크게/넓게] 만들다",
@@ -614,7 +571,6 @@ words = {
             "meaning_Kr3_senMeaning":"두 기둥 사이에 밧줄을 늘어뜨려 걸치다"
         },
         {
-            "wordImg":"",
             "word_En":"executive",
             "word_En_pron":" [ ɪɡˈzekjətɪv ]",
             "meaning_Kr1":"(기업이나 조직의) 경영[운영] 간부[이사/중역]",
@@ -628,7 +584,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 한 금융 회사의 경영직에 있다."
         },
         {
-            "wordImg":"",
             "word_En":"engage",
             "word_En_pron":"[ ɪnˈɡeɪdʒ ]",
             "meaning_Kr1":"(주의·관심을) 사로잡다[끌다]",
@@ -642,7 +597,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 젊은이들과 관계를 맺는 능력이 있다."
         },
         {
-            "wordImg":"",
             "word_En":"exhibit",
             "word_En_pron":"[ ɪɡˈzɪbɪt ]",
             "meaning_Kr1":"전시하다",
@@ -656,7 +610,6 @@ words = {
             "meaning_Kr3_senMeaning":"첫째 증거물은 검찰측에서 살해 무기라고 주장하는 칼이었다."
         },
         {
-            "wordImg":"",
             "word_En":"establish",
             "word_En_pron":"[ ɪˈstæblɪʃ ]",
             "meaning_Kr1":"설립[설정]하다",
@@ -670,7 +623,6 @@ words = {
             "meaning_Kr3_senMeaning":"그때쯤에는 그녀가 확실한 스타가 되어 있었다."
         },
         {
-            "wordImg":"",
             "word_En":"emerge",
             "word_En_pron":"[ iˈmɜːrdʒ ]",
             "meaning_Kr1":"(어둠 속이나 숨어 있던 곳에서) 나오다[모습을 드러내다]",
@@ -684,7 +636,6 @@ words = {
             "meaning_Kr3_senMeaning":"선거가 끝난 후 야당 세력들이 부상하기 시작했다."
         },
         {
-            "wordImg":"",
             "word_En":"effort",
             "word_En_pron":"[ ˈefərt ]",
             "meaning_Kr1":"수고, 애; 수고를 요하는 것",
@@ -698,7 +649,6 @@ words = {
             "meaning_Kr3_senMeaning":"러시아의 우주 개발 활동"
         },
         {
-            "wordImg":"",
             "word_En":"either",
             "word_En_pron":"[ ˈaɪðə(r); ˈiːðə(r) ]",
             "meaning_Kr1":"	(둘 중) 어느 하나[것](의)",
@@ -714,7 +664,6 @@ words = {
     ],
     "f_word":[
         {
-            "wordImg":"",
             "word_En":"figure",
             "word_En_pron":"[ ˈfɪɡjər ]",
             "meaning_Kr1":"(특히 공식적인 자료로 제시되는) 수치",
@@ -728,7 +677,6 @@ words = {
             "meaning_Kr3_senMeaning":"5면체 (도형)"
         },
         {
-            "wordImg":"",
             "word_En":"factor",
             "word_En_pron":"[ ˈfæktə(r) ]",
             "meaning_Kr1":"요인, 인자",
@@ -742,7 +690,6 @@ words = {
             "meaning_Kr3_senMeaning":"지난 70년 동안 평균 노동자의 실질 임금이 10배가 넘게 증가했다."
         },
         {
-            "wordImg":"",
             "word_En":"fellow",
             "word_En_pron":"[ ˈfeloʊ ] ",
             "meaning_Kr1":"(남자나 소년을 가리켜) 녀석[친구]",
@@ -756,7 +703,6 @@ words = {
             "meaning_Kr3_senMeaning":"영국 왕립 외과의 협회 회원"
         },
         {
-            "wordImg":"",
             "word_En":"fasten",
             "word_En_pron":"[ ˈfæsn ]",
             "meaning_Kr1":"(무엇의 두 부분을 연결하여) 매다[채우다]; 매이다[채워지다]",
@@ -770,7 +716,6 @@ words = {
             "meaning_Kr3_senMeaning":"그가 셔터들을 다시 고정시켰다."
         },
         {
-            "wordImg":"",
             "word_En":"fairly",
             "word_En_pron":" [ ˈferli ]",
             "meaning_Kr1":"상당히, 꽤",
@@ -784,7 +729,6 @@ words = {
             "meaning_Kr3_senMeaning":"시간이 정말 빨리 지나갔다."
         },
         {
-            "wordImg":"",
             "word_En":"former",
             "word_En_pron":"[ |fɔːrmə(r) ]",
             "meaning_Kr1":"(시간상으로) 예전[옛날]의",
@@ -798,7 +742,6 @@ words = {
             "meaning_Kr3_senMeaning":"전자의 선택 사항이 훨씬 더 합리적일 것이다."
         },
         {
-            "wordImg":"",
             "word_En":"firmly",
             "word_En_pron":"[ |fɜːrmli ]",
             "meaning_Kr1":"	단호히, 확고히",
@@ -812,7 +755,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"fringe",
             "word_En_pron":"[ frɪndʒ ]",
             "meaning_Kr1":"(가장자리를 따라 나 있는) 띠 모양의 것(나무건물 등)",
@@ -826,7 +768,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 해변 둘레에는 코코넛 나무가 죽 늘어서 있었다."
         },
         {
-            "wordImg":"",
             "word_En":"freely",
             "word_En_pron":"[ ˈfriːli ]",
             "meaning_Kr1":"자유롭게",
@@ -840,7 +781,6 @@ words = {
             "meaning_Kr3_senMeaning":"나는 거리낌없이 내가 실수했음을 인정한다."
         },
         {
-            "wordImg":"",
             "word_En":"faucet",
             "word_En_pron":"[ ˈfɔːsɪt ]",
             "meaning_Kr1":"(수도)꼭지",
@@ -856,7 +796,6 @@ words = {
     ],
     "g_word":[
         {
-            "wordImg":"",
             "word_En":"gather",
             "word_En_pron":"[ ˈɡæðə(r) ] ",
             "meaning_Kr1":"(사람들이[을]) 모이다[모으다]",
@@ -870,7 +809,6 @@ words = {
             "meaning_Kr3_senMeaning":"형사들이 증거를 수집하느라 몇 달을 보냈다."
         },
         {
-            "wordImg":"",
             "word_En":"garage",
             "word_En_pron":"[ ɡə|rɑːʒ; ɡə|rɑːdʒ ] ",
             "meaning_Kr1":"차고, 주차장",
@@ -884,7 +822,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"ground",
             "word_En_pron":" [ ɡraʊnd ] ",
             "meaning_Kr1":"땅바닥, 지면",
@@ -898,7 +835,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 아이들은 학교 뒤의 버려진 공터에서 놀고 있었다."
         },
         {
-            "wordImg":"",
             "word_En":"glance",
             "word_En_pron":"[ ɡlæns ]",
             "meaning_Kr1":"흘낏[휙] 보다",
@@ -912,7 +848,6 @@ words = {
             "meaning_Kr3_senMeaning":"신문 제목들을 휙 보다"
         },
         {
-            "wordImg":"",
             "word_En":"govern",
             "word_En_pron":"[ ˈɡʌvərn ]",
             "meaning_Kr1":"	(국가·국민을) 통치하다[다스리다]",
@@ -926,7 +861,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"guilty",
             "word_En_pron":"[ ˈɡɪlti ] ",
             "meaning_Kr1":"죄책감이 드는, 가책을 느끼는",
@@ -940,7 +874,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"growth",
             "word_En_pron":"[ ɡroʊθ ]",
             "meaning_Kr1":"성장",
@@ -954,7 +887,6 @@ words = {
             "meaning_Kr3_senMeaning":"영국과 미국에서 경제가 거의 성장하지 못한 실망스러운 한 해"
         },
         {
-            "wordImg":"",
             "word_En":"gamble",
             "word_En_pron":"[ ˈɡæmbl ]",
             "meaning_Kr1":"(카드경마 등에) 돈을 걸다, 도박을 하다",
@@ -968,7 +900,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 자기가 도박을 하고 있다는 것을 알았지만 해 볼 만하다고 마음을 먹었다."
         },
         {
-            "wordImg":"",
             "word_En":"grudge",
             "word_En_pron":"[ ɡrʌdʒ ]",
             "meaning_Kr1":"원한, 유감",
@@ -982,7 +913,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀가 성공한 것을 당신이 배 아파하는 것은 분명 아니겠죠?"
         },
         {
-            "wordImg":"",
             "word_En":"genius",
             "word_En_pron":"[ ˈdʒiːniəs ]",
             "meaning_Kr1":"천재성",
@@ -998,7 +928,6 @@ words = {
     ],
     "h_word":[
         {
-            "wordImg":"",
             "word_En":"happen",
             "word_En_pron":"[ ˈhæpən ]",
             "meaning_Kr1":"(특히 계획하지 않은 일이) 있다[발생하다/벌어지다]",
@@ -1012,7 +941,6 @@ words = {
             "meaning_Kr3_senMeaning":"우리가 갔을 때 그녀는 마침 외출 중이었다."
         },
         {
-            "wordImg":"",
             "word_En":"hardly",
             "word_En_pron":"[ |hɑːrdli ]",
             "meaning_Kr1":"거의...아니다[없다]",
@@ -1026,7 +954,6 @@ words = {
             "meaning_Kr3_senMeaning":"지금 커피를 마시려고 쉴 수는 없어. 이제 막 일을 시작했잖아."
         },
         {
-            "wordImg":"",
             "word_En":"health",
             "word_En_pron":"[ helθ ] ",
             "meaning_Kr1":"(몸·마음의) 건강",
@@ -1040,7 +967,6 @@ words = {
             "meaning_Kr3_senMeaning":"모든 정당들이 보건비 지출을 늘리겠다고 약속하고 있다."
         },
         {
-            "wordImg":"",
             "word_En":"handle",
             "word_En_pron":"[ ˈhændl ]",
             "meaning_Kr1":"(상황사람작업감정을) 다루다[다스리다/처리하다]",
@@ -1054,7 +980,6 @@ words = {
             "meaning_Kr3_senMeaning":"나는 그처럼 강력한 자동차를 내가 다룰 수 있을지 확신이 안 섰다."
         },
         {
-            "wordImg":"",
             "word_En":"honest",
             "word_En_pron":"[ |ɑːnɪst ]",
             "meaning_Kr1":"(성품이) 정직한",
@@ -1068,7 +993,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 순수한 얼굴을 가졌다."
         },
         {
-            "wordImg":"",
             "word_En":"highly",
             "word_En_pron":"[ ˈhaɪli ]",
             "meaning_Kr1":"크게, 대단히, 매우",
@@ -1082,7 +1006,6 @@ words = {
             "meaning_Kr3_senMeaning":"그의 선생님들은 그를 대단히 높이 평가한다."
         },
         {
-            "wordImg":"",
             "word_En":"honour",
             "word_En_pron":"[ ˈɑːnər ]",
             "meaning_Kr1":"존경, 공경",
@@ -1096,7 +1019,6 @@ words = {
             "meaning_Kr3_senMeaning":"도의적인 남성"
         },
         {
-            "wordImg":"",
             "word_En":"hollow",
             "word_En_pron":"[ ˈhɑːloʊ ]",
             "meaning_Kr1":"	(속이) 빈",
@@ -1110,7 +1032,6 @@ words = {
             "meaning_Kr3_senMeaning":"허허로운 신음 소리"
         },
         {
-            "wordImg":"",
             "word_En":"hungry",
             "word_En_pron":"[ ˈhʌŋɡri ]",
             "meaning_Kr1":"	배고픈",
@@ -1124,7 +1045,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"humble",
             "word_En_pron":"[ ˈhʌmbl ]",
             "meaning_Kr1":"겸손한",
@@ -1140,7 +1060,6 @@ words = {
     ],
     "i_word":[
         {
-            "wordImg":"",
             "word_En":"impose",
             "word_En_pron":"[ ɪmˈpoʊz ]",
             "meaning_Kr1":"(새로운 법률·세금 등을) 도입[시행]하다",
@@ -1154,7 +1073,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 자신의 가치관을 가족에게 강요하고 싶지 않았다."
         },
         {
-            "wordImg":"",
             "word_En":"intend",
             "word_En_pron":"[ ɪnˈtend ]",
             "meaning_Kr1":"의도[작정]하다, (…하려고) 생각하다",
@@ -1168,7 +1086,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"indeed",
             "word_En_pron":"[ ɪnˈdiːd ]",
             "meaning_Kr1":"	(긍정적인 진술·대답을 강조하여) 정말[확실히]",
@@ -1182,7 +1099,6 @@ words = {
             "meaning_Kr3_senMeaning":"전 전혀 개의치 않습니다. 사실 도와 드릴 수 있다면 기쁘겠어요."
         },
         {
-            "wordImg":"",
             "word_En":"invite",
             "word_En_pron":"",
             "meaning_Kr1":"초대[초청]하다",
@@ -1196,7 +1112,6 @@ words = {
             "meaning_Kr3_senMeaning":"그러한 논평은 문제를 자초할 뿐이다. [also VN to inf]"
         },
         {
-            "wordImg":"",
             "word_En":"impact",
             "word_En_pron":"[ ɪmˈpækt ] ",
             "meaning_Kr1":"(강력한) 영향, 충격",
@@ -1210,7 +1125,6 @@ words = {
             "meaning_Kr3_senMeaning":"아버지의 죽음은 그녀의 어린 시절에 큰 영향을 미쳤다."
         },
         {
-            "wordImg":"",
             "word_En":"inform",
             "word_En_pron":"[ ɪnˈfɔːrm ]",
             "meaning_Kr1":"(특히 공식적으로) 알리다",
@@ -1224,7 +1138,6 @@ words = {
             "meaning_Kr3_senMeaning":"종교는 그들 삶의 모든 측면에 영향을 미친다."
         },
         {
-            "wordImg":"",
             "word_En":"insist",
             "word_En_pron":"[ ɪnˈsɪst ]",
             "meaning_Kr1":"	(…해야 한다고) 고집하다[주장하다/우기다]",
@@ -1238,7 +1151,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"ignore",
             "word_En_pron":"[ ɪɡˈnɔː(r) ]",
             "meaning_Kr1":"무시하다",
@@ -1252,7 +1164,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"insult",
             "word_En_pron":"",
             "meaning_Kr1":"모욕하다",
@@ -1266,7 +1177,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"import",
             "word_En_pron":" [ ɪmˈpɔːt; 美 ɪmˈpɔːrt ]",
             "meaning_Kr1":"수입품",
@@ -1282,7 +1192,6 @@ words = {
     ],
     "j_word":[
         {
-            "wordImg":"",
             "word_En":"junior",
             "word_En_pron":"[ ˈdʒuːniə(r) ]",
             "meaning_Kr1":"하급의, 부하의",
@@ -1296,7 +1205,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"jacket",
             "word_En_pron":"[ ˈdʒækɪt ]",
             "meaning_Kr1":"	재킷, (셔츠 위에 입는) 상의; 반코트",
@@ -1310,7 +1218,6 @@ words = {
             "meaning_Kr3_senMeaning":"껍질째 구운 감자"
         },
         {
-            "wordImg":"",
             "word_En":"juggle",
             "word_En_pron":" [ ˈdʒʌɡl ]",
             "meaning_Kr1":"저글링하다",
@@ -1324,7 +1231,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"jockey",
             "word_En_pron":"[ ˈdʒɑːki ]",
             "meaning_Kr1":"(경마에서 특히 직업적으로 말을 타는) 기수",
@@ -1338,7 +1244,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"Jewish",
             "word_En_pron":"[ ˈdʒuːɪʃ ]",
             "meaning_Kr1":"유대인[유대교]의, 유대교인인",
@@ -1352,7 +1257,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"joyful",
             "word_En_pron":" [ ˈdʒɔɪfl ]",
             "meaning_Kr1":"아주 기뻐하는; 기쁜, 기쁨을 주는",
@@ -1366,7 +1270,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"jungle",
             "word_En_pron":"[ ˈdʒʌŋɡl ]",
             "meaning_Kr1":"밀림 (지대), 정글",
@@ -1380,7 +1283,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"jet lag",
             "word_En_pron":"",
             "meaning_Kr1":"시차증(비행기를 이용한 장거리 여행 시 시차로 인한 피로감)",
@@ -1394,7 +1296,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"jumper",
             "word_En_pron":" [ dƷʌ́mpər ]",
             "meaning_Kr1":"	점퍼, 잠바, 작업용 상의",
@@ -1408,7 +1309,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"jam",
             "word_En_pron":"[ dʒæm ]",
             "meaning_Kr1":"잼",
@@ -1424,7 +1324,6 @@ words = {
     ],
     "k_word":[
         {
-            "wordImg":"",
             "word_En":"knock",
             "word_En_pron":"[ nɑːk ] ",
             "meaning_Kr1":"(문 등을 똑똑 하고) 두드리다, 노크하다",
@@ -1438,7 +1337,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 주먹[강타]에 맞은 나는 뻗어 버렸다."
         },
         {
-            "wordImg":"",
             "word_En":"known",
             "word_En_pron":"[ noʊn ]",
             "meaning_Kr1":"(특히 많은 사람들에게) 알려진",
@@ -1452,7 +1350,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"knife",
             "word_En_pron":" [ naɪf ]",
             "meaning_Kr1":"칼, 나이프",
@@ -1466,7 +1363,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"kneel",
             "word_En_pron":"[ niːl ]",
             "meaning_Kr1":"무릎을 꿇다",
@@ -1480,7 +1376,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"keep",
             "word_En_pron":" [ kiːp ]",
             "meaning_Kr1":"	(특정한 상태위치를) 유지하다[유지하게 하다]",
@@ -1494,7 +1389,6 @@ words = {
             "meaning_Kr3_senMeaning":"너 1시간 늦었어. 왜 지체된[늦은] 거니?"
         },
         {
-            "wordImg":"",
             "word_En":"keen",
             "word_En_pron":"[ kiːn ]",
             "meaning_Kr1":"간절히 …하고 싶은, …을 열망하는",
@@ -1508,7 +1402,6 @@ words = {
             "meaning_Kr3_senMeaning":"톰은 안나를 아주 좋아한다."
         },
         {
-            "wordImg":"",
             "word_En":"kind",
             "word_En_pron":" [ kaɪnd ] ",
             "meaning_Kr1":"종류, 유형",
@@ -1522,7 +1415,6 @@ words = {
             "meaning_Kr3_senMeaning":"창문을 좀 닫아 주시겠어요?"
         },
         {
-            "wordImg":"",
             "word_En":"knit",
             "word_En_pron":" [ nɪt ]",
             "meaning_Kr1":"	(실로 옷 등을) 뜨다[짜다], 뜨개질[편물]을 하다",
@@ -1536,7 +1428,6 @@ words = {
             "meaning_Kr3_senMeaning":"긴밀히/밀접하게 결합된 공동체"
         },
         {
-            "wordImg":"",
             "word_En":"kick",
             "word_En_pron":"[ kɪk ] ",
             "meaning_Kr1":"(발로) 차다",
@@ -1550,7 +1441,6 @@ words = {
             "meaning_Kr3_senMeaning":"그가 그 자리에 자신이 취직을 할 수도 있었다는 것을 알게 되면 땅을 칠 것이다."
         },
         {
-            "wordImg":"",
             "word_En":"knot",
             "word_En_pron":"[ nɑːt ]",
             "meaning_Kr1":"	매듭",
@@ -1566,7 +1456,6 @@ words = {
     ],
     "l_word":[
         {
-            "wordImg":"",
             "word_En":"leave",
             "word_En_pron":" [ liːv ]",
             "meaning_Kr1":"	(사람장소에서) 떠나다[출발하다]",
@@ -1580,7 +1469,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀가 다른 남자 때문에 그를 떠난대."
         },
         {
-            "wordImg":"",
             "word_En":"light",
             "word_En_pron":"[ laɪt ]",
             "meaning_Kr1":"(해전등 등의) 빛, 광선, 빛살",
@@ -1594,7 +1482,6 @@ words = {
             "meaning_Kr3_senMeaning":"불[전등]을 켜다/끄다"
         },
         {
-            "wordImg":"",
             "word_En":"level",
             "word_En_pron":"[ ˈlevl ] ",
             "meaning_Kr1":"(특정한 시간적 상황에 존재하는 양의) 정도[수준]",
@@ -1608,7 +1495,6 @@ words = {
             "meaning_Kr3_senMeaning":"중역회의 수준에서 내린 결정"
         },
         {
-            "wordImg":"",
             "word_En":"laugh",
             "word_En_pron":"[ læf ]",
             "meaning_Kr1":"	(소리내어) 웃다",
@@ -1622,7 +1508,6 @@ words = {
             "meaning_Kr3_senMeaning":"웃다[웃음소리를 내다]"
         },
         {
-            "wordImg":"",
             "word_En":"least",
             "word_En_pron":" [ liːst ]",
             "meaning_Kr1":"(크기양정도 등이) 가장 적은[작은]; 최소(의)",
@@ -1636,7 +1521,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"label",
             "word_En_pron":"[ ˈleɪbl ]",
             "meaning_Kr1":"(종이 등에 물건에 대한 정보를 적어 붙여 놓은) 표[라벨/상표]",
@@ -1652,7 +1536,6 @@ words = {
     ],
     "m_word":[
         {
-            "wordImg":"",
             "word_En":"matter",
             "word_En_pron":"[ ˈmætə(r) ] ",
             "meaning_Kr1":"(고려하거나 처리해야 할) 문제[일/사안]",
@@ -1666,7 +1549,6 @@ words = {
             "meaning_Kr3_senMeaning":"무슨 일이야? 뭐가 잘못됐니?"
         },
         {
-            "wordImg":"",
             "word_En":"manage",
             "word_En_pron":"[ ˈmænɪdʒ ]",
             "meaning_Kr1":"	(힘든 일을) 간신히[용케] 해내다, (어떻게든) …하다[해내다]",
@@ -1680,7 +1562,6 @@ words = {
             "meaning_Kr3_senMeaning":"그는 일주일에 100파운드가 못 되는 돈으로 살아 내야 한다."
         },
         {
-            "wordImg":"",
             "word_En":"master",
             "word_En_pron":"[ |mæstə(r) ]",
             "meaning_Kr1":"(흔히 하인종의) 주인",
@@ -1694,7 +1575,6 @@ words = {
             "meaning_Kr3_senMeaning":"변장의 달인"
         },
         {
-            "wordImg":"",
             "word_En":"moment",
             "word_En_pron":"[ |moʊmənt ]",
             "meaning_Kr1":"잠깐, 잠시",
@@ -1708,7 +1588,6 @@ words = {
             "meaning_Kr3_senMeaning":"나는 그에게 그 나쁜 소식을 알려줄 알맞은 때를 기다리고 있다."
         },
         {
-            "wordImg":"",
             "word_En":"manner",
             "word_En_pron":"[ ˈmænə(r) ] ",
             "meaning_Kr1":"(일의) 방식",
@@ -1724,7 +1603,6 @@ words = {
     ],
     "n_word":[
         {
-            "wordImg":"",
             "word_En":"notice",
             "word_En_pron":"[ |noʊtɪs ]",
             "meaning_Kr1":"신경씀, 주목, 알아챔",
@@ -1738,7 +1616,6 @@ words = {
             "meaning_Kr3_senMeaning":"‘잔디밭에 들어가지 마시오’라는 표지판"
         },
         {
-            "wordImg":"",
             "word_En":"native",
             "word_En_pron":"[ ˈneɪtɪv ]",
             "meaning_Kr1":"(사람이) 태어난 곳의",
@@ -1752,7 +1629,6 @@ words = {
             "meaning_Kr3_senMeaning":"원주민들"
         },
         {
-            "wordImg":"",
             "word_En":"narrow",
             "word_En_pron":"[ |næroʊ ] ",
             "meaning_Kr1":"좁은",
@@ -1766,7 +1642,6 @@ words = {
             "meaning_Kr3_senMeaning":"좁은 관심사"
         },
         {
-            "wordImg":"",
             "word_En":"nature",
             "word_En_pron":"[ ˈneɪtʃə(r) ] ",
             "meaning_Kr1":"(동식물 등의) 자연",
@@ -1780,7 +1655,6 @@ words = {
             "meaning_Kr3_senMeaning":"불친절한 것은 그의 천성이 아니다."
         },
         {
-            "wordImg":"",
             "word_En":"number",
             "word_En_pron":"[ ˈnʌmbə(r) ]",
             "meaning_Kr1":"수, 숫자, 수사",
@@ -1796,7 +1670,6 @@ words = {
     ],
     "o_word":[
         {
-            "wordImg":"",
             "word_En":"object",
             "word_En_pron":" [ əb|dʒekt ]",
             "meaning_Kr1":"물건, 물체",
@@ -1810,7 +1683,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀의 유일한 삶의 목표는 여행 작가가 되는 것이다."
         },
         {
-            "wordImg":"",
             "word_En":"occupy",
             "word_En_pron":"[ |ɑːkjupaɪ ]",
             "meaning_Kr1":"(공간·지역·시간을) 차지하다",
@@ -1824,7 +1696,6 @@ words = {
             "meaning_Kr3_senMeaning":"(그 나라) 수도가 반란군들에게 점령되었다."
         },
         {
-            "wordImg":"",
             "word_En":"offend",
             "word_En_pron":"[ əˈfend ]",
             "meaning_Kr1":"기분 상하게[불쾌하게] 하다",
@@ -1838,7 +1709,6 @@ words = {
             "meaning_Kr3_senMeaning":"그는 16살 때 범죄를 저지르기 시작했다."
         },
         {
-            "wordImg":"",
             "word_En":"obtain",
             "word_En_pron":"[ əbˈteɪn ]",
             "meaning_Kr1":"(특히 노력 끝에) 얻다[구하다/입수하다]",
@@ -1852,7 +1722,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"oppose",
             "word_En_pron":"[ əˈpoʊz ]",
             "meaning_Kr1":"	(계획·정책 등에) 반대하다",
@@ -1868,7 +1737,6 @@ words = {
     ],
     "p_word":[
         {
-            "wordImg":"",
             "word_En":"please",
             "word_En_pron":"[ pliːz ]",
             "meaning_Kr1":"<남에게 정중하게 무엇을 부탁하거나 하라고 할 때 덧붙이는 말>",
@@ -1882,7 +1750,6 @@ words = {
             "meaning_Kr3_senMeaning":"“좀 도와 드릴까요?” “네, 그렇게 해 주세요.”"
         },
         {
-            "wordImg":"",
             "word_En":"prompt",
             "word_En_pron":" [ prɑːmpt ] ",
             "meaning_Kr1":"	즉각적인, 지체 없는",
@@ -1896,7 +1763,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 폭탄 발견으로 보안이 강화되었다."
         },
         {
-            "wordImg":"",
             "word_En":"pursue",
             "word_En_pron":"[ pərˈsuː ] ",
             "meaning_Kr1":"추구하다, (어떤 일을 어느 정도의 기간을 두고) 밀고 나가다[해 나가다]",
@@ -1910,7 +1776,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀가 극장을 떠났고 그 뒤를 기자들이 열나게 뒤쫓았다."
         },
         {
-            "wordImg":"",
             "word_En":"people",
             "word_En_pron":"[ ˈpiːpl ]",
             "meaning_Kr1":"(‘사람’의 복수 의미로) 사람들",
@@ -1924,7 +1789,6 @@ words = {
             "meaning_Kr3_senMeaning":"프랑스 국민"
         },
         {
-            "wordImg":"",
             "word_En":"period",
             "word_En_pron":" [ |pɪriəd ] ",
             "meaning_Kr1":"	기간, 시기(時期)",
@@ -1940,7 +1804,6 @@ words = {
     ],
     "q_word":[
         {
-            "wordImg":"",
             "word_En":"quite",
             "word_En_pron":"[ kwaɪt ]",
             "meaning_Kr1":"꽤, 상당히",
@@ -1954,7 +1817,6 @@ words = {
             "meaning_Kr3_senMeaning":"여기 있으면 정말 편안할 거예요."
         },
         {
-            "wordImg":"",
             "word_En":"quote",
             "word_En_pron":"[ kwoʊt ] ",
             "meaning_Kr1":"인용하다, (남의 말을 그대로) 전달하다[옮기다]",
@@ -1968,7 +1830,6 @@ words = {
             "meaning_Kr3_senMeaning":"그들이 우리에게 샤워기 설치 비용 견적가를 300파운드로 제시했다."
         },
         {
-            "wordImg":"",
             "word_En":"quiet",
             "word_En_pron":"[ ˈkwaɪət ]",
             "meaning_Kr1":"(소리가 거의 없이) 조용한",
@@ -1982,7 +1843,6 @@ words = {
             "meaning_Kr3_senMeaning":"조용히 한잔하다"
         },
         {
-            "wordImg":"",
             "word_En":"quick",
             "word_En_pron":" [ kwɪk ]",
             "meaning_Kr1":"	(속도상으로걸리는 시간이 짧아서) (재)빠른[신속한]",
@@ -1996,7 +1856,6 @@ words = {
             "meaning_Kr3_senMeaning":"우리는 즉각 결정을 내려야 한다."
         },
         {
-            "wordImg":"",
             "word_En":"queen",
             "word_En_pron":"[ kwiːn ]",
             "meaning_Kr1":"	여왕",
@@ -2012,7 +1871,6 @@ words = {
     ],
     "r_word":[
         {
-            "wordImg":"",
             "word_En":"reserve",
             "word_En_pron":" [ rɪˈzɜːrv ] ",
             "meaning_Kr1":"예약하다",
@@ -2026,7 +1884,6 @@ words = {
             "meaning_Kr3_senMeaning":"경영진이 가입 거부권을 가지고 있다."
         },
         {
-            "wordImg":"",
             "word_En":"reputation",
             "word_En_pron":"[ ˌrepjuˈteɪʃn ]",
             "meaning_Kr1":"평판, 명성",
@@ -2040,7 +1897,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"responsible",
             "word_En_pron":"[ rɪ|spɑːnsəbl ]",
             "meaning_Kr1":"	(…을) 책임지고[책임 맡고] 있는",
@@ -2054,7 +1910,6 @@ words = {
             "meaning_Kr3_senMeaning":"흡연은 폐암으로 인한 사망의 90% 정도에 대한 원인이 된다."
         },
         {
-            "wordImg":"",
             "word_En":"relationship",
             "word_En_pron":"[ rɪˈleɪʃnʃɪp ]",
             "meaning_Kr1":"(두 사람·집단·국가 사이의) 관계",
@@ -2068,7 +1923,6 @@ words = {
             "meaning_Kr3_senMeaning":"정신적 건강과 육체적 건강 사이의 관계"
         },
         {
-            "wordImg":"",
             "word_En":"registration",
             "word_En_pron":"[ ˌredʒɪˈstreɪʃn ]",
             "meaning_Kr1":"등록, (출생·혼인·사망 사실의) 신고; (우편물의) 등기 처리",
@@ -2084,7 +1938,6 @@ words = {
     ],
     "s_word":[
         {
-            "wordImg":"",
             "word_En":"satisfaction",
             "word_En_pron":"[ ˌsætɪsˈfækʃn ]",
             "meaning_Kr1":"만족(감), 흡족; 만족(감을 주는 것)",
@@ -2098,7 +1951,6 @@ words = {
             "meaning_Kr3_senMeaning":"나는 매니저에게 항의를 했지만 아무런 보상도 받지 못했다."
         },
         {
-            "wordImg":"",
             "word_En":"specifically",
             "word_En_pron":"[ spəˈsɪfɪkli ]",
             "meaning_Kr1":"분명히, 명확하게",
@@ -2112,7 +1964,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 신문이, 아니 좀 더 구체적으로 말하면, 그 편집자가 그 사진들을 게재한 것 때문에 법정에 서게 되었다."
         },
         {
-            "wordImg":"",
             "word_En":"surroundings",
             "word_En_pron":"[ səˈraʊndɪŋz ]",
             "meaning_Kr1":"환경",
@@ -2126,7 +1977,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"subscription",
             "word_En_pron":" [ səbˈskrɪpʃn ]",
             "meaning_Kr1":"	구독료; 구독",
@@ -2140,7 +1990,6 @@ words = {
             "meaning_Kr3_senMeaning":"그를 기리는 동상이 일반 국민들의 모금으로 설립되었다."
         },
         {
-            "wordImg":"",
             "word_En":"significant",
             "word_En_pron":"[ sɪɡˈnɪfɪkənt ]",
             "meaning_Kr1":"	(영향을 주거나 두드러질 정도로) 중요한[의미 있는/커다란]",
@@ -2156,7 +2005,6 @@ words = {
     ],
     "t_word":[
         {
-            "wordImg":"",
             "word_En":"temperature",
             "word_En_pron":"[ |temprətʃə(r) ]",
             "meaning_Kr1":"온도, 기온",
@@ -2170,7 +2018,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"transparent",
             "word_En_pron":"[ trænsˈpærənt ]",
             "meaning_Kr1":"투명한",
@@ -2184,7 +2031,6 @@ words = {
             "meaning_Kr3_senMeaning":"공문서를 더 알기 쉽게 하자는 운동"
         },
         {
-            "wordImg":"",
             "word_En":"traditional",
             "word_En_pron":"[ trəˈdɪʃənl ] ",
             "meaning_Kr1":"전통의",
@@ -2198,7 +2044,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"translation",
             "word_En_pron":"[ træns|leɪʃn; trænz|leɪʃn ] ",
             "meaning_Kr1":"번역[통역] (과정)",
@@ -2212,7 +2057,6 @@ words = {
             "meaning_Kr3_senMeaning":"이론을 실제로 옮김"
         },
         {
-            "wordImg":"",
             "word_En":"transaction",
             "word_En_pron":"[ trænˈzækʃn ]",
             "meaning_Kr1":"거래, 매매",
@@ -2228,7 +2072,6 @@ words = {
     ],
     "u_word":[
         {
-            "wordImg":"",
             "word_En":"underground",
             "word_En_pron":" [ |ʌndəɡraʊnd; 美 |ʌndərɡraʊnd ] ",
             "meaning_Kr1":"지하의",
@@ -2242,7 +2085,6 @@ words = {
             "meaning_Kr3_senMeaning":"지하철 역"
         },
         {
-            "wordImg":"",
             "word_En":"unconscious",
             "word_En_pron":"[ ʌn|kɑːnʃəs ]",
             "meaning_Kr1":"의식을 잃은, 의식이 없는",
@@ -2256,7 +2098,6 @@ words = {
             "meaning_Kr3_senMeaning":"그녀는 자기가 사람들에게 미치는 영향을 의식하지 못한다."
         },
         {
-            "wordImg":"",
             "word_En":"unfortunate",
             "word_En_pron":" [ ʌn|fɔːrtʃənət ]",
             "meaning_Kr1":"	운이 없는[나쁜], 불운한, 불행한",
@@ -2270,7 +2111,6 @@ words = {
             "meaning_Kr3_senMeaning":"그것은 말을 불쾌하게 잘못 골라 쓴 경우였다."
         },
         {
-            "wordImg":"",
             "word_En":"unnecessary",
             "word_En_pron":"[ ʌn|nesəseri ]",
             "meaning_Kr1":"불필요한, 필요 이상의",
@@ -2284,7 +2124,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"unimportant",
             "word_En_pron":"[ |ʌnɪm|pɔːrtnt ]",
             "meaning_Kr1":"중요하지 않은, 하찮은",
@@ -2300,7 +2139,6 @@ words = {
     ],
     "v_word":[
         {
-            "wordImg":"",
             "word_En":"vocabulary",
             "word_En_pron":"[ və|kæbjəleri ] ",
             "meaning_Kr1":"(개인이 아는·사용하는) 어휘",
@@ -2314,7 +2152,6 @@ words = {
             "meaning_Kr3_senMeaning":"그 단어는 광고 용어의 일부가 되었다."
         },
         {
-            "wordImg":"",
             "word_En":"variation",
             "word_En_pron":"[ |veri|eɪʃn ]",
             "meaning_Kr1":"(특히 양·정도의) 변화[차이]",
@@ -2328,7 +2165,6 @@ words = {
             "meaning_Kr3_senMeaning":"모차르트의 주제를 딴 일련의 변주곡"
         },
         {
-            "wordImg":"",
             "word_En":"vegetable",
             "word_En_pron":"[ ˈvedʒtəbl ]",
             "meaning_Kr1":"채소, 야채",
@@ -2342,7 +2178,6 @@ words = {
             "meaning_Kr3_senMeaning":"실직을 한 이후로 나는 단조로운 일상을 보내고 있다."
         },
         {
-            "wordImg":"",
             "word_En":"virtually",
             "word_En_pron":"[ |vɜːrtʃuəli ] ",
             "meaning_Kr1":"사실상, 거의",
@@ -2356,7 +2191,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"violently",
             "word_En_pron":"[ ˈvaɪələntli ]",
             "meaning_Kr1":"	격렬하게, 맹렬히",
@@ -2372,7 +2206,6 @@ words = {
     ],
     "w_word":[
         {
-            "wordImg":"",
             "word_En":"wonderful",
             "word_En_pron":"[ |wʌndərfl ]",
             "meaning_Kr1":"아주 멋진, 신나는, 훌륭한",
@@ -2386,7 +2219,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"whichever",
             "word_En_pron":"[ wɪtʃˈevə(r) ]",
             "meaning_Kr1":"	어느 쪽이든 …한 것; 누구든 …한 사람",
@@ -2400,7 +2232,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"wrapping",
             "word_En_pron":"[ ˈræpɪŋ ]",
             "meaning_Kr1":"포장 재료, 포장지",
@@ -2414,7 +2245,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"withdraw",
             "word_En_pron":"[ wɪð|drɔː; wɪθ|drɔː ]",
             "meaning_Kr1":"(뒤로) 물러나다, 철수하다; 빼내다, 철수시키다",
@@ -2428,7 +2258,6 @@ words = {
             "meaning_Kr3_senMeaning":"영국이 유럽연합에서 탈퇴해야 한다는 요구들이 있어 왔다."
         },
         {
-            "wordImg":"",
             "word_En":"whenever",
             "word_En_pron":"[ wenˈevə(r) ] ",
             "meaning_Kr1":"	…할 때는 언제든지",
@@ -2444,7 +2273,6 @@ words = {
     ],
     "x_word":[
         {
-            "wordImg":"",
             "word_En":"xylophone",
             "word_En_pron":"[ |zaɪləfoʊn ] ",
             "meaning_Kr1":"	실로폰, 목금",
@@ -2458,7 +2286,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"xylogen",
             "word_En_pron":"[ záilədƷən ]",
             "meaning_Kr1":"식물",
@@ -2472,7 +2299,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"xerasia",
             "word_En_pron":"[ ziəréiƷə ]",
             "meaning_Kr1":"모발 건조증",
@@ -2486,7 +2312,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"xerox",
             "word_En_pron":"[ ˈzɪrɑːks ]",
             "meaning_Kr1":"(복사기로) 복사하다",
@@ -2500,7 +2325,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"X-ray",
             "word_En_pron":" [ ˈeks reɪ ] ",
             "meaning_Kr1":"엑스선, 엑스레이",
@@ -2514,7 +2338,6 @@ words = {
             "meaning_Kr3_senMeaning":"나는 엑스선 검진을 받으러 가야 했다."
         },
         {
-            "wordImg":"",
             "word_En":"Xmas",
             "word_En_pron":"[ ˈkrɪsməs; ˈeksməs ] ",
             "meaning_Kr1":"크리스마스(보통 글에서 Christmas를 줄여서 쓴 것)",
@@ -2530,7 +2353,6 @@ words = {
     ],
     "y_word":[
         {
-            "wordImg":"",
             "word_En":"yourself",
             "word_En_pron":"[ jər|self ; jɔːr|self ; jʊr|self ]",
             "meaning_Kr1":"(you가 어떤 동작의 원인이면서 대상이기도 할 때 씀)",
@@ -2544,7 +2366,6 @@ words = {
             "meaning_Kr3_senMeaning":"우리는 여러분과 같은 사람들에게 이것들을 많이 판다."
         },
         {
-            "wordImg":"",
             "word_En":"yearly",
             "word_En_pron":"[ ˈjɪrli ]",
             "meaning_Kr1":"	1년에 한 번씩 있는, 해마다[매년] 있는[하는]",
@@ -2558,7 +2379,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"youthful",
             "word_En_pron":"[ ˈjuːθfl ] ",
             "meaning_Kr1":"	젊은이 특유의, 젊은이[청년]다운",
@@ -2572,7 +2392,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"yearning",
             "word_En_pron":"[ ˈjɜːrnɪŋ ]",
             "meaning_Kr1":"갈망, 동경",
@@ -2586,7 +2405,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"yellowish",
             "word_En_pron":" [ |jeloʊɪʃ ]",
             "meaning_Kr1":"	노르스름한, 누르스름한",
@@ -2602,7 +2420,6 @@ words = {
     ],
     "z_word":[
         {
-            "wordImg":"",
             "word_En":"zealous",
             "word_En_pron":"[ ˈzeləs ] ",
             "meaning_Kr1":"열성적인",
@@ -2616,7 +2433,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"zodiac",
             "word_En_pron":"[ |zoʊdiæk ]",
             "meaning_Kr1":"황도대",
@@ -2630,7 +2446,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"zigzag",
             "word_En_pron":" [ ˈzɪɡzæɡ ]",
             "meaning_Kr1":"지그재그, 갈지자형",
@@ -2644,7 +2459,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"zombie",
             "word_En_pron":"[ ˈzɑːmbi ] ",
             "meaning_Kr1":"무기력한[반쯤 죽은 것 같은] 사람",
@@ -2658,7 +2472,6 @@ words = {
             "meaning_Kr3_senMeaning":""
         },
         {
-            "wordImg":"",
             "word_En":"zebra",
             "word_En_pron":"[ ˈzebrə; ˈziːbrə ] ",
             "meaning_Kr1":"얼룩말",

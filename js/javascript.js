@@ -50,10 +50,11 @@ let wB_revise = document.querySelector('.wB_revise');
 let kind_of_wordBook = document.querySelector('.kind_of_wordBook');
 let wB_leftBtn = document.querySelector('.wB_leftBtn')
 let wB_rightBtn = document.querySelector('.wB_rightBtn')
+
 //1.생성 p 2.생성 li  3.생성한단어의 순번 4.생성한 단어의 첫번째 알파벳
 //5.a to z에서 첫번째 알파벳의 순번 6.누른 단어가 배열의 몇번째에있는지  
-
 let addP, addLi, whatNumber, whatAlphabets, whatAlphabetsNum, whatWordNum, clickWord
+
 let alphabetsArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 let wrongP, wrongLi,whatListOfWord //오답단어 생성 p , 오답단어 생성 li, 각 리스트의 data-set값
@@ -157,7 +158,6 @@ function rightMouseUpImgChange(){
 }
 
 function wbShowWord(who){
-    let wb_changeImg = document.querySelector('.wb_wordImg')
     let wb_change_word_En = document.querySelector('.wb_changeWord')
     let wb_change_word_Pron = document.querySelector('.wb_changePron')
     let wb_change_word_Kr1 = document.querySelector('.wb_change1Kr')
@@ -178,7 +178,6 @@ function wbShowWord(who){
     clickWord = wordsArr[whatAlphabetsNum][whatWordNum]
 
     //텍스트 변화 !!!
-    wb_changeImg.src = clickWord.wordImg
     wb_change_word_En.innerHTML = [...who][whatNumber]
     wb_change_word_Pron.innerHTML = clickWord.word_En_pron
     wb_change_word_Kr1.innerHTML = clickWord.meaning_Kr1
@@ -193,7 +192,6 @@ function wbShowWord(who){
 }
 
 function AtWord(){
-    let changeImg = document.querySelector('.wordImg')
     let change_word_En = document.querySelector('.changeWord')
     let change_word_Pron = document.querySelector('.changePron')
     let change_word_Kr1 = document.querySelector('.change1Kr')
@@ -212,7 +210,6 @@ function AtWord(){
     //바뀔 텍스트들 JSON이랑 비교해서 선언!
     function wordTextChange(){
         var currentAlphabetArr = wordsArr[currentAlphabet]
-        changeImg.innerHTML = currentAlphabetArr[currentWord].wordImg;
         change_word_En.innerHTML = currentAlphabetArr[currentWord].word_En;
         change_word_Pron.innerHTML = currentAlphabetArr[currentWord].word_En_pron;
         change_word_Kr1.innerHTML = currentAlphabetArr[currentWord].meaning_Kr1;
@@ -405,7 +402,7 @@ function Atgame1(){
     gameRightBtn.addEventListener('mouseup',rightMouseUpImgChange)
     const input = document.querySelector('.inputValue');
     const game_HowManyWords = document.querySelector('.game_HowManyWords')
-    const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
+    // const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
     const game_word_alphabet = document.querySelectorAll('.game_word_alphabet')
     
     let game_meaning_kr1 = document.querySelector('.game_meaning_kr1');
@@ -444,7 +441,7 @@ function Atgame1(){
         input.value = ""
         input.maxlength = '1'
         gamePoint = 0      
-        lifeImg.src  = 'img/life.png'
+        lifeImg.src  = 'img/gameWin.png'
     }
 
     //랜덤단어불러오기
@@ -466,7 +463,7 @@ function Atgame1(){
         game_meaning_kr2.innerHTML = randomWordKr2;
         game_meaning_kr3.innerHTML = randomWordKr3;
         
-        //가져온 단어를 하나씩 나누기
+        //가져온 단어를 알파벳 하나씩 나누기
         let splitAlphabet = /[a-z]/gi;
         result = randomWord.match(splitAlphabet);
 
@@ -486,6 +483,7 @@ function Atgame1(){
 
     //input에 value값 받아오기
     function printValue()  {
+        //입력값 ! 
         let inputValue = input.value;
         const game_word_text = document.querySelectorAll('.game_HowManyWords li p')
         wrongWord = 0
@@ -495,18 +493,25 @@ function Atgame1(){
         if( result.includes(inputValue) == true){
             result.forEach( (i,e) => {
                 if ( i == inputValue){
-                    result[e] = ''; // 배열에 같은 값은 공백으로 만들어준다
-                    gamePoint = gamePoint + 1 // 중복된 알파벳전부계산해서 점수 +
+                     // 배열에 같은 값은 공백으로 만들어준다
+                    result[e] = '';
+                    // 중복된 알파벳전부계산해서 점수 +
+                    gamePoint = gamePoint + 1 
                 }
             })
+            //입력한 값이랑 단어의 알파벳과 같은게 있으면 opacity를 1로 바꿈
             game_word_text.forEach( i => {
                 if( i.innerHTML == inputValue){
                     i.style.opacity = '1'
                 }
             })
+        //같은 알파벳이없으면 life 1 감소 
         }else {
             life = life - 1
             leftLife.innerHTML = life;
+            //틀릴때마다 이미지 교체!
+            lifeImg.src  = `img/life${life}.png`
+            //라이프가 0이되면 게임 패배 !와 동시에 정답을 알려줌
             if(life == 0 ){
                 gamePoint = 0
                 input.style.display = 'none'
@@ -520,6 +525,7 @@ function Atgame1(){
         console.log(inputValue)
         console.log(gamePoint)
         console.log(life)
+        //승리조건 = 게임포인트가 글자수와 같으면 승리 ! 
         if(gamePoint == result.length ){
             gamePoint = 0
             input.style.display = 'none'
